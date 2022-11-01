@@ -1,0 +1,108 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部模块开始 */
+header {
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 1px solid #c81523;
+}
+
+/* 头部模块结束 */
+
+/* 注册模块开始 */
+.registerarea {
+    height: 300px;
+    border: 1px solid #e3e6e3;
+    margin-top: 10px;
+}
+
+.registerarea h3 {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background-color: #e9ece9;
+    border-bottom: 1px solid #e3e6e3;
+}
+
+.registerarea h3 a {
+    float: left;
+    font-size: 18px;
+}
+
+.registerarea .reg_form {
+    width: 600px;
+    margin: 50px auto 0;
+}
+
+.registerarea .reg_form ul li {
+    height: 30px;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.registerarea .reg_form ul li label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+
+.registerarea .reg_form ul li input {
+    width: 200px;
+    height: 30px;
+    margin: 0 20px 0 10px;
+    border: 1px solid #e3e6e3;
+}
+
+.registerarea .reg_form .error {
+    color: #c81523;
+    /* display: none; */
+}
+
+.registerarea .reg_form .success {
+    color: green;
+    /* display: none; */
+}
+
+.registerarea .reg_form ul li:last-child input {
+    width: 200px;
+    height: 100%;
+    color: white;
+    background-color: #c81523;
+    margin-left: 90px;
+}
+
+/* 注册模块结束 */
+
+/* 底部模块开始 */
+footer {
+    height: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer ul {
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    margin: 20px 166px;
+}
+
+footer ul li {
+    float: left;
+}
+
+footer ul li:nth-child(even) {
+    width: 1px;
+    height: 18px;
+    margin: 0 5px;
+    background-color: gray;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* 底部模块结束 */

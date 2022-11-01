@@ -1,0 +1,323 @@
+/* **************************main()模块开始 */
+.main {
+    position: relative;
+    width: 980px;
+    height: 440px;
+    margin: 10px 0 0 220px;
+}
+
+/* **********焦点图模块 */
+.main .focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 720px;
+    height: 100%;
+}
+
+.main .focus ul li img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+/* **********快报模块 */
+.main .news {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 242px;
+    height: 362px;
+    border: 1px solid gray;
+}
+
+/* *****快报标题模块 */
+.main .news .newstitle {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dotted #e4e4e4;
+}
+
+.main .news .newstitle h3 {
+    position: absolute;
+    left: 10px;
+    display: inline-block;
+}
+
+.main .news .newstitle a {
+    position: absolute;
+    right: 10px;
+}
+
+.main .news .newstitle a::after {
+    font-family: 'iconfont';
+    content: '\e60c';
+}
+
+/* *****快报快速新闻模块 */
+.main .news .newsbody {
+    height: 150px;
+    border-bottom: 1px dotted #e4e4e4;
+}
+
+.main .news .newsbody ul li {
+    height: 30px;
+    line-height: 30px;
+    text-indent: 10px;
+    /* 1.将文字限制在一行显示 white-space:normal(默认换行)nowrap(不换行) */
+    white-space: nowrap;
+    /* 2.设置溢出隐藏 overflow:hidden */
+    overflow: hidden;
+    /* 3.显示省略号text-overflow:ellipsis */
+    text-overflow: ellipsis;
+}
+
+/* *****快报快捷服务模块 */
+.main .news .newsfooter {
+    position: relative;
+}
+
+.main .news .newsfooter ul {
+    width: 240px;
+    height: 180px;
+    background: url(../upload/icons.png) 0px -14px no-repeat;
+}
+
+.main .news .newsfooter ul li {
+    float: left;
+    width: 61px;
+    height: 61px;
+    border: 1px solid gray;
+    margin: -1px 0 0 -1px;
+}
+
+.main .news .newsfooter ul li:nth-child(n) {
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.main .news .newsfooter ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+}
+
+.main .news .newsfooter ul li a span {
+    display: block;
+    text-align: center;
+}
+
+/* **********减价促销图标模块 */
+.main .news .newsfooter .del {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    width: 15px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    background-color: green;
+}
+
+.main .news .newsfooter .deltriangle {
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    border-width: 10px 7px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: white;
+}
+
+/* **********广告模块 */
+.main img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* **************************main()模块结束 */
+
+
+/* **************************推荐模块开始 */
+.recommend {
+    height: 163px;
+    margin-top: 10px;
+    background-color: #ebebeb;
+}
+
+.recomL {
+    width: 200px;
+    height: 100%;
+    background: url(../images/recom.png) no-repeat 64px 38px #5c5251;
+}
+
+.recomR li {
+    float: left;
+    width: 248px;
+    height: 100%;
+    background-color: aqua;
+}
+
+.recomR li:nth-child(even) {
+    width: 2px;
+    height: 153px;
+    margin: 5px 0;
+    background-color: #dddddd;
+}
+
+/* **************************推荐模块结束 */
+
+/* **************************floor模块开始 */
+.floor {
+    margin-top: 10px;
+}
+
+/* **********flloor1家电模块 */
+.f1jiadian .box_hd {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.f1jiadian .box_hd h2 {
+    width: 100px;
+    color: #c81623;
+    font-weight: 400;
+}
+
+.f1jiadian .box_hd .tab_list ul li {
+    float: left;
+}
+
+.f1jiadian .box_hd .tab_list ul li a {
+    /* 扩大点击范围 */
+    display: block;
+    padding: 0 20px;
+}
+
+.f1jiadian .box_hd .tab_list ul li:nth-child(even) {
+    width: 1px;
+    height: 16px;
+    background-color: #7f6697;
+    margin: 7px 0;
+}
+
+.f1jiadian .box_bd {
+    height: 360px;
+}
+
+.f1jiadian .box_bd .tab_content>ul>li {
+    float: left;
+    width: 220px;
+    height: 360px;
+    text-align: center;
+}
+
+.f1jiadian .box_bd .tab_content a {
+    /* 扩大点击范围 */
+    display: block;
+}
+
+.f1jiadian .box_bd .tab_content>ul>li:nth-child(2) {
+    width: 320px;
+}
+
+.f1jiadian .box_bd .tab_content .navfast ul>li {
+    float: left;
+    width: 85px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+
+.f1jiadian .box_bd .tab_content>ul>li:nth-child(3),
+.f1jiadian .box_bd .tab_content>ul>li:nth-child(4) {
+    border-right: 1px solid #cccccc;
+}
+
+
+.f1jiadian .box_bd .tab_content>ul>li:nth-child(3) a:nth-child(1),
+.f1jiadian .box_bd .tab_content>ul>li:nth-child(5) a:nth-child(1) {
+    border-bottom: 2px solid #cccccc;
+}
+
+/* 手机模块 */
+.f2shouji .box_hd {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    border-bottom: 2px solid #c81623;
+}
+
+.f2shouji .box_hd h2 {
+    width: 100px;
+    color: #c81623;
+    font-weight: 400;
+}
+
+.f2shouji .box_hd .tab_list ul li {
+    float: left;
+}
+
+.f2shouji .box_hd .tab_list ul li a {
+    /* 扩大点击范围 */
+    display: block;
+    padding: 0 20px;
+}
+
+.f2shouji .box_hd .tab_list ul li:nth-child(even) {
+    width: 1px;
+    height: 16px;
+    background-color: #7f6697;
+    margin: 7px 0;
+}
+
+.f2shouji .box_bd {
+    height: 360px;
+}
+
+.f2shouji .box_bd .tab_content>ul>li {
+    float: left;
+    width: 220px;
+    height: 360px;
+    text-align: center;
+}
+
+.f2shouji .box_bd .tab_content a {
+    /* 扩大点击范围 */
+    display: block;
+}
+
+.f2shouji .box_bd .tab_content>ul>li:nth-child(2) {
+    width: 320px;
+}
+
+.f2shouji .box_bd .tab_content .navfast ul>li {
+    float: left;
+    width: 85px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+
+.f2shouji .box_bd .tab_content>ul>li:nth-child(3),
+.f2shouji .box_bd .tab_content>ul>li:nth-child(4) {
+    border-right: 1px solid #cccccc;
+}
+
+
+.f2shouji .box_bd .tab_content>ul>li:nth-child(3) a:nth-child(1),
+.f2shouji .box_bd .tab_content>ul>li:nth-child(5) a:nth-child(1) {
+    border-bottom: 2px solid #cccccc;
+}
+
+
+/* **************************floor模块结束 */

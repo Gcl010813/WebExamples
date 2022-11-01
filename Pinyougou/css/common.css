@@ -1,0 +1,323 @@
+/* 声明字体图标 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.ttf?t=1666191951890') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 版心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 左浮动 */
+.fl {
+    float: left;
+}
+
+/* 右浮动 */
+.fr {
+    float: right;
+}
+
+/* 红色字体 */
+.color_red {
+    color: #c81623;
+}
+
+
+/* ********************************************************** */
+/* **************************顶部导航栏模块开始 */
+.shortcut {
+    height: 30px;
+    line-height: 30px;
+    background-color: #f1f1f1;
+}
+
+.shortcut ul li {
+    float: left;
+}
+
+/* .shortcut .fr li a {
+    padding: 0 20px;
+    border-right: 1px solid #666666;
+}
+
+.shortcut .fr .downrocket a::after {
+    content: ' ▽';
+}
+
+.shortcut .fr .lilast a {
+    border: 0;
+} */
+
+/* 盒子之间的竖线也采用li元素制作 */
+.shortcut .fr li:nth-child(even) {
+    width: 1px;
+    height: 16px;
+    background-color: #666666;
+    margin: 7px 15px;
+}
+
+.shortcut .fr span {
+    margin-left: 3px;
+}
+
+/* **************************顶部导航栏模块结束 */
+
+
+/* **************************header模块开始 */
+.header {
+    height: 80px;
+    border: 1px solid transparent;
+}
+
+/* .header img {
+    margin: 12px 0;
+} */
+
+/* logo模块 */
+.header .logo {
+    width: 175px;
+    height: 56px;
+    /* 由于没有使用定位仅使用浮动 为使单独的盒子与父盒子分开故对父盒子设置透明边框起固定作用外边距设置需要合理更改 */
+    margin: 11px 0;
+}
+
+.header .logo a {
+    display: block;
+    width: 175px;
+    height: 56px;
+    /* 京东做法 */
+    font-size: 0;
+    /* 淘宝做法 */
+    /* text-indent: -9999px;
+    overflow: hidden; */
+    background: url(../images/logo.png);
+}
+
+/* 购物车模块 */
+.header .shopcar {
+    position: relative;
+    width: 130px;
+    height: 28px;
+    line-height: 28px;
+    margin: 25px 0;
+    background-color: #f7f7f7;
+    border: 1px solid #dfdfdf;
+}
+
+/* 使用伪元素选择器结合文字图标采用第一种引用方式 */
+.header .shopcar::before {
+    font-family: 'iconfont';
+    content: '\e609';
+    color: red;
+    margin-left: 10px;
+}
+
+.header .shopcar::after {
+    font-family: 'iconfont';
+    content: '\e60c';
+}
+
+.header .shopcar .count {
+    position: absolute;
+    top: -8px;
+    /* 若采用右对齐右侧固定 数字位数多时会将盒子往左撑开 */
+    left: 90px;
+    /* 不设置宽度 让数字撑开盒子 */
+    height: 16px;
+    line-height: 16px;
+    color: white;
+    background-color: red;
+    padding: 0 5px;
+    border-radius: 8px 8px 8px 0;
+}
+
+/* 搜索模块|热词模块 */
+.header .search {
+    width: 430px;
+    height: 60px;
+    line-height: 30px;
+    margin: 10px auto;
+}
+
+.header .search input {
+    float: left;
+    width: 370px;
+    height: 30px;
+    border: 2px solid #b92915;
+    border-right: 0;
+}
+
+.header .search button {
+    /* float: left; */
+    width: 60px;
+    height: 30px;
+    color: white;
+    background-color: #b92915;
+}
+
+.header .search ul {
+    width: 100%;
+    height: 30px;
+}
+
+.header .search ul li {
+    float: left;
+    margin: 0 3px;
+}
+
+/* **************************header模块结束 */
+
+
+/* **************************nav导航栏模块开始 */
+.nav {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 2px solid #b1191a;
+}
+
+.nav .dropdown {
+    width: 210px;
+    color: white;
+    background-color: #b1191a;
+}
+
+.nav .dropdown .dt {
+    text-align: center;
+}
+
+.nav .dropdown .dd {
+    display: block;
+}
+
+.nav .dropdown .dd li {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    background-color: #c81623;
+    padding-left: 10px;
+    margin-left: 2px;
+}
+
+.nav .dropdown .dd li::after {
+    position: absolute;
+    right: 5px;
+    font-family: 'iconfont';
+    content: '\e60c';
+    color: white;
+}
+
+.nav .dropdown .dd a {
+    color: white;
+}
+
+.nav .dropdown .dd li:hover {
+    background-color: white;
+}
+
+.nav .dropdown .dd li:hover a {
+    color: #b1191a;
+}
+
+.nav .navitems ul li {
+    float: left;
+    margin: 0 15px;
+}
+
+.nav .navitems ul li a {
+    padding: 0 20px;
+}
+
+/* **************************nav导航栏模块结束 */
+
+
+/* **************************footer底部模块开始 */
+.footer {
+    float: left;
+    width: 100%;
+    height: 400px;
+    background-color: #f5f5f5;
+}
+
+.footer .top li {
+    float: left;
+    width: 300px;
+    height: 101px;
+    border-bottom: 1px solid gray;
+}
+
+.footer .top h5 {
+    width: 50px;
+    height: 50px;
+    margin: 25px 10px;
+    background: url(../images/true.png);
+}
+
+.footer .top .text {
+    width: 100px;
+    height: 100px;
+    line-height: 20px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer .top h4 {
+    font-size: 16px;
+    height: 20px;
+}
+
+.footer .top p {
+    height: 20px;
+}
+
+.footer .middle dl {
+    float: left;
+    width: 300px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.footer .middle dl dt {
+    font-size: 16px;
+}
+
+.footer .middle dl dd img {
+    /* code尺寸为90x90 dl总行高每个dd(21)*5=105px  上下总空余105-90=15px */
+    /* 为保证dl下划线齐平 对code模块扩大其占位 */
+    margin: 7.5px 0;
+}
+
+.footer .bottom ul {
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    margin: 20px 166px;
+}
+
+.footer .bottom ul li {
+    float: left;
+}
+
+.footer .bottom ul li:nth-child(even) {
+    width: 1px;
+    height: 18px;
+    margin: 0 5px;
+    background-color: gray;
+}
+
+.footer .bottom p {
+    text-align: center;
+}
+
+/* **************************footer底部模块结束 */
