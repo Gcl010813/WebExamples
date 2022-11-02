@@ -1,0 +1,394 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* 禁止高亮显示 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 自定义按钮样式 */
+input {
+    -webkit-appearance: none;
+}
+
+/* 禁止长按出现提示框 */
+a,
+img {
+    -webkit-touch-callout: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+body {
+    width: 100%;
+    min-width: 483px;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: -apple-system, Helvetica, sans-serif;
+    font-size: 14px;
+    /* 根据文字的大小乘以行高倍数作为行高的具体像素值 */
+    line-height: 1.5;
+    background-color: #ffffff;
+}
+
+/* 声明字体图标 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../../../icomoon/fonts/icomoon.ttf') format('truetype');
+}
+
+.iconfont {
+    font-family: "icomoon" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ******************************头部模块 */
+.hd {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* 统一设定li的大小 */
+.hd ul li {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #303330;
+}
+
+/* 设置li内a的样式 */
+.hd ul li a {
+    display: block;
+    color: #bebeb2;
+    font-size: 18px;
+}
+
+/* 重写第一个li的宽度 */
+.hd ul li:first-child {
+    width: 10%;
+}
+
+/* 设置第一个li内img的宽度 */
+.hd ul li:first-child img {
+    width: 15px;
+}
+
+/* 重写第二个li的宽度 */
+.hd ul li:nth-child(2) {
+    width: 15%;
+}
+
+/* 设置第二个li内img的宽度 */
+.hd ul li:nth-child(2) img {
+    width: 40px;
+}
+
+/* 重写第三个li的宽度 */
+.hd ul li:nth-child(3) {
+    width: 55%;
+}
+
+/* 重写第四个li的宽度 */
+.hd ul li:last-child {
+    width: 20%;
+    background-color: #ff450f;
+}
+
+
+
+/* ******************************搜素模块 */
+.top {
+    /* 搜素框采用固定定位 务必添加宽|高度且通过设置max|min开控制范围 */
+    position: fixed;
+    min-width: inherit;
+    max-width: inherit;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+/* 设置总体样式 */
+.top a {
+    position: absolute;
+    top: 0;
+    width: 54px;
+    height: 100%;
+}
+
+/* 重写第一个a的位置 */
+.top a:nth-child(1) {
+    left: 0;
+}
+
+/* 设置a内图片大小 */
+.top a:nth-child(1) img {
+    width: 20px;
+}
+
+/* 重写第二个a的位置 */
+.top a:nth-child(2) {
+    right: 0;
+    color: white;
+}
+
+/* 搜素模块 */
+.top .search {
+    position: relative;
+    /* 始终减去两端固定宽度的盒子 */
+    width: calc(100% - 108px);
+    height: 80%;
+    border-radius: 25px;
+    background-color: white;
+    /* 父级没有添加边框 子元素设置外边框会发生外边距塌陷 父级添加overflow:hidden */
+    margin: 5px 54px;
+}
+
+/* JD广告图片设置 */
+.top .search .img {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 20px;
+    height: 15px;
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+}
+
+/* before伪元素设置竖线 */
+.top .search .img::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    width: 1px;
+    height: 15px;
+    background-color: #b9b5b5;
+}
+
+/* after伪元素结合字体图标设置搜素按钮 */
+.top .search .img::after {
+    font-family: 'icomoon';
+    content: '\e92a';
+    position: absolute;
+    left: 40px;
+    width: 20px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 16px;
+}
+
+/* 设置搜素文本框 */
+.top .search input {
+    position: absolute;
+    top: 7px;
+    left: 80px;
+    width: 50%;
+    height: 26px;
+    border: none;
+}
+
+/* 文本框点击选中后取消边框 */
+.top .search input:focus {
+    outline: none;
+}
+
+
+
+/* ******************************商品模块 */
+/* 焦点图模块 */
+.focusimg a {
+    /* k扩大点击范围 */
+    display: block;
+}
+
+/* 图片大小同父级盒子一样 */
+.focusimg a img {
+    width: 100%;
+}
+
+/* 热卖商品模块 */
+.hotgoods {
+    /* 盒子设置圆角 图片未设置 溢出的角设置隐藏 */
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.hotgoods a {
+    /* 图片一行排列 */
+    float: left;
+    width: 33.3%;
+}
+
+/* 图片设置父级盒子宽度 */
+.hotgoods a img {
+    width: 100%;
+}
+
+/* 商品快速导航模块 */
+.navgoods {
+    width: 100%;
+    height: 200px;
+    background: url(../uploads/nav-bg.dpg);
+    background-size: 100%;
+}
+
+/* 设置浮动 一行显示5个 */
+.navgoods li {
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 100px;
+}
+
+.navgoods li a img {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    /* 图片居中显示 */
+    transform: translateX(-50%);
+    width: 50px;
+}
+
+/* 快速导航文字显示位置设置 */
+.navgoods li a span {
+    position: absolute;
+    bottom: 5px;
+    /* 显示文字宽度未父盒子宽度 只需再控制一下低边距*/
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* 商品广告模块 */
+.adgoods a {
+    float: left;
+}
+
+/* 分别设置每个图片父盒子的显示宽度 */
+.adgoods a:nth-child(1) {
+    width: 50%;
+}
+
+.adgoods a:nth-child(n+2) {
+    width: 25%;
+}
+
+/* 图片大小同父盒子宝保存一致 */
+.adgoods a img {
+    width: 100%;
+}
+
+/* 商品详情模块 */
+.goods {
+    width: 100%;
+}
+
+/* 每个li商品独占50%的宽度 */
+.goods li {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 350px;
+    /* 使其内部标签居中显示 */
+    text-align: center;
+}
+
+/* 商品图设置 */
+.goods li img {
+    width: 90%;
+    /* 设置最大宽度 防止图片自适应高度覆盖下方盒子 */
+    max-width: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* 样品详情设置 */
+.goods li p {
+    width: 100%;
+    font-size: 16px;
+    color: gray;
+    padding: 0 10%;
+    margin-top: 5px;
+
+    /* 两行显示相关设置 */
+    /* 1.设置溢出隐藏 */
+    overflow: hidden;
+    /* 2.设置显示省略号 */
+    text-overflow: ellipsis;
+    /* 3.弹性伸缩盒子模型显示 */
+    display: -webkit-box;
+    /* 4.限制在一个块元素内显示的文本行数 */
+    -webkit-line-clamp: 2;
+    /* 5.设置或检索伸缩盒子对象的子元素排列方式 */
+    -webkit-box-orient: vertical;
+}
+
+/* 商品价格模块 */
+.goods li .price {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    color: #ff4142;
+}
+
+.goods li .price span {
+    font-size: 26px;
+}
+
+/* 折扣模块(有的模块未未有折扣活动 重新设置类名便于设置样式) */
+.goods li .price .discount {
+    height: 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ff4142;
+}
+
+/* 商品评价设置 */
+.goods li .info {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10%;
+}
+
+.goods li .info span:first-child {
+    float: left;
+    color: white;
+    border-radius: 5px;
+    background-color: #ff4142;
+    padding: 0 3px;
+}
+
+.goods li .info span:nth-child(2) {
+    float: left;
+    color: gray;
+    margin-left: 6px;
+}
+
+.goods li .info a:last-child {
+    float: right;
+    color: black;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 0 5px;
+}
