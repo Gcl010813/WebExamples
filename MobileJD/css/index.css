@@ -44,7 +44,7 @@ body {
 /* 声明字体图标 */
 @font-face {
     font-family: 'icomoon';
-    src: url('../../../icomoon/fonts/icomoon.ttf') format('truetype');
+    src: url('../icomoon/fonts/icomoon.ttf') format('truetype');
 }
 
 .iconfont {
