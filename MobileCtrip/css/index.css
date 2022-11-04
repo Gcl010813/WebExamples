@@ -1,0 +1,508 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    color: gray;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a,
+img {
+    -webkit-touch-callout: none;
+}
+
+/* 声明字体图标 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../icomoon/fonts/icomoon.ttf') format('truetype');
+}
+
+.iconfont {
+    font-family: "icomoon" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    width: 100%;
+    max-width: 540px;
+    min-width: 500px;
+    font-size: 14px;
+    background-color: #f4f4f4;
+    margin: 0 auto;
+}
+
+/* 头部模块 */
+header {
+    /* flex布局 */
+    display: flex;
+    height: 50px;
+    /* 搜索框居中显示 */
+    align-items: center;
+    background-color: #ffffff;
+}
+
+header .search {
+    width: 100%;
+    height: 30px;
+    line-height: 28px;
+    color: gray;
+    border-radius: 15px;
+    border: 1px solid #0086f6;
+}
+
+header .search i::before {
+    font-family: 'icomoon';
+    content: '\e92a';
+    font-style: normal;
+    margin: 0 10px;
+}
+
+/* 快速导航模块 */
+.nav {
+    display: flex;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* 换行显示 */
+    flex-wrap: wrap;
+    background-color: #ffffff;
+}
+
+/* a的大小 可点击范围 */
+.nav a {
+    /* flex布局 */
+    display: flex;
+    width: 20%;
+    height: 60px;
+    color: #333333;
+    /* 设置主轴方向 y轴向下 */
+    flex-direction: column;
+    /* 设置(侧轴x轴)内容水平居中(1列) */
+    align-items: center;
+    /* 图片和文字之间间距相等 */
+    justify-content: space-evenly;
+}
+
+/* 图片大小 */
+.nav a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* 背景颜色 渐变色 */
+.nav a:nth-child(1) {
+    background: linear-gradient(to bottom, #fa6055, #f3776e);
+}
+
+.nav a:nth-child(2) {
+    background: linear-gradient(to bottom, #3d86fa, #6f9fec);
+}
+
+.nav a:nth-child(3) {
+    background: linear-gradient(to bottom, #5f82ff, #819af5);
+}
+
+.nav a:nth-child(4) {
+    background: linear-gradient(to bottom, #36c8b5, #67daca);
+}
+
+.nav a:nth-child(5) {
+    background: linear-gradient(to bottom, #ff8e3b, #e29e6d);
+}
+
+.nav a:nth-child(5n+1) {
+    background-color: #fff5f1;
+}
+
+.nav a:nth-child(5n+2) {
+    background-color: #eff9ff;
+}
+
+.nav a:nth-child(5n+3) {
+    background-color: #f2f5ff;
+}
+
+.nav a:nth-child(5n+4) {
+    background-color: #ecfcf8;
+}
+
+.nav a:nth-child(5n+5) {
+    background-color: #fff9f2;
+}
+
+/* 第一行文字颜色 */
+.nav a:nth-child(-n+5) {
+    color: white;
+}
+
+
+
+/* 热点模块 */
+.hot {
+    /* flex布局 子元素flex:1平分宽度 */
+    display: flex;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.hot a {
+    /* 分成两份 */
+    flex: 1;
+    background-color: #ffffff;
+    padding: 0 5px;
+    display: flex;
+    /* 改变a内部标签主轴为y轴向下 */
+    flex-direction: column;
+    /* a标签内部子元素贴边后平分剩余空间 */
+    justify-content: space-between;
+}
+
+.hot a .text {
+    /* 介绍文字实现主轴方向两边贴边显示 */
+    display: flex;
+    /* 介绍文字贴边显示 */
+    justify-content: space-between;
+}
+
+/* 介绍文字样式 .hot下的所有h2标签 */
+.hot h2 {
+    color: #ff621f;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* 重写h2样式 */
+.hot1 h2:last-child {
+    font-size: 14px;
+    color: #ff4679;
+    border-radius: 5px;
+    background-color: #ffebe3;
+}
+
+.hot2 h2 {
+    color: #cca46d;
+}
+
+/* span标签设置样式 */
+.hot1 span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff621f;
+}
+
+.hot2 span {
+    color: #cab291;
+}
+
+/* 设置图片显示区域大小 */
+.hot .img {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    /* 第一个图片居中显示 */
+    background: url(../uploads/view1.png) center center;
+}
+
+.hot2 .img {
+    /* 重写第二个图片 第二个图片压缩显示 */
+    background: url(../uploads/list_legacy.png);
+    background-size: 100% 100%;
+}
+
+/* 广告图模块 */
+.adimg a {
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    background: url(../uploads/ad.png);
+    background-size: 100% 100%;
+}
+
+
+/* 快速链接模块 */
+.fastlink {
+    /* flex布局 */
+    display: flex;
+    width: 100%;
+    height: 60px;
+    /* 水平分配剩余空间 */
+    justify-content: space-around;
+    /* 侧轴(y轴方向上垂直居中显示) */
+    align-items: center;
+}
+
+.fastlink a {
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #999999;
+}
+
+/* 使用字体图标 */
+.fastlink .tel::before {
+    font-family: 'icomoon';
+    content: '\e926';
+}
+
+.fastlink .download::before {
+    font-family: 'icomoon';
+    content: '\e913';
+}
+
+
+/* 网站信息模块 */
+.webinfo {
+    width: 100%;
+    height: 50px;
+    /* 两行元素 分别占据一半的行高 */
+    line-height: 25px;
+    text-align: center;
+}
+
+/* 设置内边距撑开文字间距 */
+.webinfo a {
+    padding: 0 25px;
+}
+
+/* 对第一个标签设置右边框隔开盒子 */
+.webinfo a:first-child {
+    border-right: 1px solid gray;
+}
+
+/* ICP盒子转换为块元素 独占一行 */
+.webinfo a:last-child {
+    display: block;
+}
+
+
+/* 底部模块 */
+footer {
+    position: fixed;
+    /* 固定定位的盒子必须给宽度 固定定位脱离标准流 不占有原位置*/
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    max-width: 540px;
+    height: 50px;
+    justify-content: space-around;
+    background-color: #ffffff;
+}
+
+/* 扩大点击范围 */
+footer a {
+    width: 35px;
+    text-align: center;
+}
+
+/* 设置图标显示范围 超出范围隐藏 */
+footer a div[class^="img"] {
+    width: 35px;
+    height: 30px;
+    overflow: hidden;
+    /* 设置每个图片的位置  使用二倍精灵图 先将图片缩小  到50%再测量位置 background-size调整到原图尺寸的一半 */
+    background: url(../images/tabbar.png) -7px -8px;
+    background-size: 48px auto;
+}
+
+/* 重盖每个图片背景的提取位置 */
+footer a div[class$="2"] {
+    background-position: -7px -58px;
+}
+
+footer a div[class$="3"] {
+    background-position: -7px -104px;
+}
+
+footer a div[class$="4"] {
+    background-position: -7px -153px;
+}
+
+
+
+
+/* 原版模块 */
+.Pro1 {
+    width: 100%;
+    /* 第二层上下边距5px 每层一个上边框1px */
+    height: 313px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 外层盒子样式 */
+.Pro1 div[class^="d"] {
+    display: flex;
+    height: 101px;
+    /* 设置半层高度的层高居中 */
+    line-height: 50px;
+    overflow: hidden;
+}
+
+/* 文字颜色 */
+.Pro1 a {
+    color: rgb(216, 206, 206);
+}
+
+/* 第二层盒子上下间隔开 */
+.Pro1 .d2 {
+    margin: 5px 0;
+}
+
+/* 设置外层盒子背景颜色渐变色 */
+.Pro1 .d1 {
+    background: linear-gradient(to right, #ff6851, #ff804f, #ff8e4a, #ff9f48);
+}
+
+.Pro1 .d2 {
+    background: linear-gradient(to right, #448fef, #449cf0, #64a5d3, #7ab9db);
+}
+
+.Pro1 .d3 {
+    background: linear-gradient(to right, #179b90, #3cb98a, #50be6e, #62c354);
+}
+
+/* 内层第二个盒子添加左右边框 */
+.Pro1 div[class^="d"]>div:nth-child(2) {
+    border: 1px solid #e0b2a0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+/* 内层盒子的a标签添加上边框 */
+.Pro1 div[class^="d"]>div:nth-child(n+2) a:last-child {
+    border-top: 1px solid #e29e83;
+}
+
+/* 内层盒子样式 */
+.Pro1 div[class^="d"] div {
+    /* 内层的盒子平分宽度 */
+    flex: 1;
+    /* 对内层盒子设置flex布局 */
+    display: flex;
+    /* 改变主轴方向 (y轴向下) */
+    flex-direction: column;
+    /* 内层盒子的内部文字居中显示 */
+    text-align: center;
+
+    /* 使用此属性需要将a转换为块元素来扩大点击范围(结合下一个样式(.Pro1 a...)设定) */
+    /* align-items: center; */
+}
+
+/* .Pro1 a {
+    width: 100%;
+    color: rgb(216, 206, 206);
+    text-align: center;
+} */
+
+/* 设置图片位置 */
+.Pro1 div[class^="img"] {
+    width: 40px;
+    height: 40px;
+    background-color: aqua;
+    margin: 5px auto;
+    background: url(../images/sprite.png) no-repeat 0px -126px;
+    background-size: 104px auto;
+}
+
+/* 重写背景图片位置 */
+.Pro1 div[class$="2"] {
+    background-position: -3px -290px;
+}
+
+/* 重写背景图片位置 */
+.Pro1 div[class$="3"] {
+    background-position: 0px -181px;
+}
+
+
+.Pro2 {
+    display: flex;
+    /* 允许换行显示 */
+    flex-wrap: wrap;
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 20px auto 100px;
+}
+
+.Pro2 li {
+    list-style: none;
+    /* 可以使用百分比来设置子元素的宽度 */
+    flex: 20%;
+}
+
+/* 扩大a的点击范围 */
+.Pro2 li a {
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    /* 改变主轴的方向(y轴向下) */
+    flex-direction: column;
+    /* 子元素平分主轴剩余空间 */
+    justify-content: space-around;
+    /* 子元素在侧轴上居中显示 */
+    align-items: center;
+}
+
+/* 设置背景图片 */
+.Pro2 li a div[class^="img"] {
+    width: 30px;
+    height: 20px;
+    background: url(../images/subnav-bg.png) no-repeat 4px 2px;
+    background-size: 24px auto;
+}
+
+/* 重写背景图片位置 */
+.Pro2 li a div[class$="2"] {
+    background-position: 4px -26px;
+}
+
+.Pro2 li a div[class$="3"] {
+    background-position: 4px -55px;
+}
+
+.Pro2 li a div[class$="4"] {
+    background-position: 4px -86px;
+}
+
+.Pro2 li a div[class$="5"] {
+    background-position: 4px -112px;
+}
+
+.Pro2 li a div[class$="6"] {
+    background-position: 4px -141px;
+}
+
+.Pro2 li a div[class$="7"] {
+    background-position: 4px -170px;
+}
+
+.Pro2 li a div[class$="8"] {
+    background-position: 4px -196px;
+}
+
+.Pro2 li a div[class$="9"] {
+    background-position: 4px -222px;
+}
+
+.Pro2 li a div[class$="10"] {
+    background-position: 4px -246px;
+}
