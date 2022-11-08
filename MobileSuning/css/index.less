@@ -1,0 +1,563 @@
+// @import "common";
+
+/* 自身样式 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    -webkit-touch-callout: none;
+}
+
+a:active {
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+/* 声明字体图标 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../icomoon/fonts/icomoon.ttf') format('truetype');
+}
+
+.iconfont {
+    font-family: "icomoon" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-width: 320px;
+    width: 15rem;
+    font-family: Arial, Helvetica, STHeiTi, sans-serif;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+}
+
+/* 顶部模块 */
+header {
+    width: 100%;
+    height: 1.5rem;
+
+    //顶部模块中的top层
+    .top {
+        //添加固定定位后脱离header范畴
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        width: 15rem;
+        height: 1.5rem;
+        background: linear-gradient(to bottom, #e0baf7, #f9c4c2);
+        // flex布局
+        display: flex;
+        // 在主轴上元素两边贴边再平分剩余空间
+        justify-content: space-between;
+        //侧轴上垂直居中显示
+        align-items: center;
+
+
+        //左侧分类|右侧登录盒子设置宽高外边距
+        .l,
+        .r {
+            width: .9rem;
+            height: 1.1rem;
+            margin: 0 .45rem;
+        }
+
+        //扩大a标签的点击范围
+        div a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            //图片实现水平居中显示
+            text-align: center;
+        }
+
+        //top层中间广告盒子设置高度 上下空出距离
+        .m {
+            height: 1.4rem;
+        }
+
+        //top层广告图片同父盒子相同高度
+        div a img {
+            height: 100%;
+        }
+    }
+
+    //search搜索层
+    .search {
+        margin-top: 1.5rem;
+        position: relative;
+        height: 1.5rem;
+        background: linear-gradient(to bottom, #f6c3c8, #f3c8cd); //点击跳转搜索页面
+
+        a {
+            //绝对定位 控制标签的位置
+            position: absolute;
+            top: .25rem;
+            width: calc(100% - .9rem);
+            height: 1rem;
+            line-height: 1rem;
+            font-size: .5rem;
+            color: gray;
+            border-radius: .5rem;
+            background-color: white;
+            margin: 0 .45rem;
+
+            //使用字体图标来显示搜索标志
+            &::before {
+                font-family: icomoon;
+                content: '\e92a';
+                margin: .2rem;
+            }
+        }
+    }
+}
+
+/* 导航模块 */
+.nav {
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(to bottom, #f9cdca, #f5e2e4, #f4edf2, #f6f5fa);
+
+    //导航主体模块
+    .ulnav {
+        display: flex;
+        //允许换行显示
+        flex-wrap: wrap;
+        //宽度始终比父盒子少.9rem(两边的外边距)
+        width: calc(100% - .9rem);
+        height: 5rem;
+        border-radius: .5rem;
+        background-color: white;
+        margin: 0 .45rem;
+        //li盒子方角溢出隐藏
+        overflow: hidden;
+
+        //每一个li盒子的宽度为父盒子的20%
+        li {
+            width: 20%;
+            height: 50%;
+
+            a {
+                display: flex;
+                //主轴设置为y轴
+                flex-direction: column;
+                //均匀平分剩余间距
+                justify-content: space-around;
+                //侧轴(水平方向上居中显示)
+                align-items: center;
+                //扩大a的点击范围
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 1.5rem;
+                }
+
+                span {
+                    font-size: .4rem;
+                }
+            }
+        }
+    }
+}
+
+/* 广告模块 */
+.ad {
+    width: calc(100% - .9rem);
+    height: 5rem;
+    border-radius: .5rem;
+    margin: .25rem .45rem 0;
+    background-color: pink;
+
+    a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* 热卖模块 */
+.hot {
+    width: calc(100% - .9rem);
+    height: 6rem;
+    border-radius: .5rem;
+    background-color: white;
+    margin: .25rem .45rem 0;
+    overflow: hidden;
+    //flex 布局上下两层盒子分开
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    //第一层第二层盒子高度
+    .h1,
+    .h2 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 2.9rem;
+    }
+
+    //左半部分|右半部分的宽度相同
+    .l,
+    .r {
+        //宽度(49% 中间隔开)
+        width: 49%;
+        border-radius: .5rem;
+        background: linear-gradient(to bottom, #fde5ec 10%, #fdf6fb 20%, #ffffff);
+        overflow: hidden;
+
+        //盒子内部顶部文字
+        .word {
+            display: flex;
+            //主轴(x轴)两边贴边对齐
+            justify-content: space-between;
+            //侧轴(y轴)垂直居中
+            align-items: center;
+            width: calc(100% - 1.2rem);
+            height: .8rem;
+            //同父盒子两边保持距离
+            margin: 0 .6rem;
+
+            //h3标题设置
+            h3 {
+                font-size: .5rem;
+                font-weight: 500;
+            }
+        }
+
+        //盒子底部商品图片和文字介绍
+        .img {
+            display: flex;
+            //子元素在主轴(x轴)上平分剩余空间
+            justify-content: space-around;
+            width: calc(100% - .5rem);
+            height: 2.1rem;
+            //始终同父盒子保留边距
+            margin: 0 .25rem;
+
+            //扩大a的点击范围
+            a {
+                //设置相对定位 便于控制span标签的位置
+                position: relative;
+                width: 2.1rem;
+                height: 2.1rem;
+                text-align: center;
+
+                //图片同父级标签a同样大小
+                img {
+                    width: 90%;
+                }
+
+                //商品介绍标签
+                span {
+                    //使用绝对定位
+                    position: absolute;
+                    bottom: .1rem;
+                    //居中显示
+                    left: 50%;
+                    transform: translateX(-50%);
+                    //！！！！！(问题需要解决)->若不设置宽度则无法使用子绝父相保证span标签居中显示
+                    //若仅仅利用文字来撑开盒子宽度 屏幕尺寸缩小时文字无法显示完整
+                    //若利用flex布局 无法将span盒子上移至盖着图片的底部白边 
+                    width: 100%;
+                    //文字垂直居中显示
+                    height: .4rem;
+                    line-height: .4rem;
+                    color: #bd704e;
+                    font-size: .3rem;
+                    //文字水平矩形显示
+                    text-align: center;
+                    border-radius: .2rem;
+                    background-color: #ffebeb;
+                    // padding: 0 .1rem;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    .h1 .l {
+
+        //h1层顶部flex布局主轴排列方式|span标签样式单独设置
+        .word {
+            justify-content: flex-start;
+
+            span {
+                color: white;
+                font-size: .3rem;
+                height: .4rem;
+                line-height: .4rem;
+                border-radius: .2rem;
+                padding: 0 .1rem;
+                margin-left: .2rem;
+                background-color: #e81822;
+            }
+        }
+
+        //h1层底部商品介绍标签span文字颜色单独设置
+        .img a span {
+            color: red;
+        }
+    }
+}
+
+/* 焦点图模块 */
+.focus {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - .9rem);
+    height: 8rem;
+    border-radius: .5rem;
+    background-color: #ffffff;
+    margin: .25rem .45rem 0;
+    overflow: hidden;
+
+    //左侧背景图
+    .left {
+        width: 49%;
+        height: 100%;
+        border-radius: .5rem;
+        overflow: hidden;
+        background: url(../uploads/focus1.jpg) no-repeat center;
+        background-size: 100%;
+
+        //左侧上方显示的图片
+        img {
+            width: 100%;
+        }
+    }
+
+    //右侧推荐
+    .right {
+        width: 49%;
+        height: 100%;
+        //右半部分上下分隔开
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+
+        //左侧上下两部分
+        .up,
+        .down {
+            width: 100%;
+            //上下隔开
+            height: 3.9rem;
+            border-radius: .5rem;
+            background: url(../uploads/focus_r0.png) no-repeat;
+            background-size: 100% 100%;
+            //上|下部分盒子左右分开一行显示
+            display: flex;
+            overflow: hidden;
+
+            div {
+                // 盒子占父级宽度的50%
+                width: 50%;
+                height: 100%;
+                //上|下层盒子左右两侧盒子子标签上下排列
+                display: flex;
+                flex-direction: column;
+
+                //标头标签样式
+                h3 {
+                    color: white;
+                    font-size: .5rem;
+                    height: .9rem;
+                    line-height: .9rem;
+                    text-align: center;
+                }
+
+                //商品图片和介绍
+                a {
+                    //相对定位为图片和价绍文字设置位置
+                    position: relative;
+                    width: 100%;
+                    height: 2.9rem;
+
+                    img {
+                        position: absolute;
+                        top: .1rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 70%;
+                        //高度自适应
+                    }
+
+                    span {
+                        position: absolute;
+                        bottom: .2rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        color: white;
+                        font-size: .4rem;
+                        width: 80%;
+                        height: .5rem;
+                        line-height: .5rem;
+                        text-align: center;
+                        border-radius: .5rem;
+                        background-color: #ff4a19;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 喜欢模块 */
+.love {
+    width: calc(100% - .9rem);
+    height: 1.2rem;
+    margin: .25rem .45rem 0;
+    background: url(../uploads/love.webp) no-repeat center center;
+    background-size: 100%;
+}
+
+/* 商品模块 */
+.goods {
+    width: calc(100% - .9rem);
+    margin: .25rem .45rem 3rem;
+    //每一个商品li换行显示
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+        //宽度49% 剩余宽度中间隔开
+        width: 49%;
+        height: 10rem;
+        border-radius: .5rem;
+        margin-bottom: .2rem;
+        background-color: #ffffff;
+        overflow: hidden;
+
+        //扩大点击范围
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            //商品图片宽高设置
+            img {
+                width: 100%;
+                height: 7rem;
+                vertical-align: bottom;
+            }
+
+            //商品介绍设置
+            p {
+                height: 1.2rem;
+                line-height: .6rem;
+                color: black;
+                font-size: .4rem;
+                font-weight: 550;
+                padding: 0 .1rem;
+                margin: .1rem 0;
+                //文字省略号设置
+                // 1.设置溢出隐藏 
+                overflow: hidden;
+                // 2.设置显示省略号 
+                text-overflow: ellipsis;
+                // 3.弹性伸缩盒子模型显示
+                display: -webkit-box;
+                // 4.限制在一个块元素内显示的文本行数
+                -webkit-line-clamp: 2;
+                // 5.设置或检索伸缩盒子对象的子元素排列方式 
+                -webkit-box-orient: vertical;
+            }
+
+            //商品标签设置
+            .flag {
+                height: .5rem;
+                margin: .1rem 0;
+
+                //所有span标签设置样式(浮动存在问题)
+                span {
+                    float: left;
+                    height: .5rem;
+                    line-height: .5rem;
+                    font-size: .3rem;
+                    border: .01rem solid #ffbb00;
+                    border-radius: .2rem;
+                    background-color: #fefbee;
+                    margin: 0 0 0 .2rem;
+                    padding: 0 .1rem;
+                }
+
+                //自营标签单独设置
+                .zy {
+                    color: white;
+                    background-color: #ff5500;
+                }
+            }
+
+            //价格|评论
+            .price_comment {
+                height: .8rem;
+                color: #ff4422;
+                font-size: .3rem;
+                font-weight: 550;
+                padding: 0 .1rem;
+
+                //价格整数样式
+                .price {
+                    font-size: .5rem;
+                }
+
+                //评论样式
+                .comment {
+                    color: #999999;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+/* 底部模块 */
+footer {
+    //固定定位(必须设置宽度)
+    position: fixed;
+    bottom: 0;
+    width: calc(15rem - .9rem);
+    height: 1.2rem;
+    background-color: #ffffff;
+    margin: 0 .45rem;
+    //内部内容flex布局
+    display: flex;
+    justify-content: space-around;
+
+    div {
+        width: 15%;
+        height: 100%;
+
+        a {
+            height: 100%;
+            //图片和文字采用flex布局
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: .6rem;
+            }
+
+            span {
+                height: .6rem;
+                line-height: .6rem;
+                color: #666666;
+                font-size: .3rem;
+            }
+        }
+    }
+}

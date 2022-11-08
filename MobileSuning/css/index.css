@@ -1,0 +1,487 @@
+/* 自身样式 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  -webkit-touch-callout: none;
+}
+
+a:active {
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/* 声明字体图标 */
+@font-face {
+  font-family: 'icomoon';
+  src: url('../icomoon/fonts/icomoon.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "icomoon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  width: 15rem;
+  font-family: Arial, Helvetica, STHeiTi, sans-serif;
+  line-height: 1.5;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+}
+
+/* 顶部模块 */
+header {
+  width: 100%;
+  height: 1.5rem;
+}
+
+header .top {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 15rem;
+  height: 1.5rem;
+  background: linear-gradient(to bottom, #e0baf7, #f9c4c2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .top .l,
+header .top .r {
+  width: 0.9rem;
+  height: 1.1rem;
+  margin: 0 0.45rem;
+}
+
+header .top div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+header .top .m {
+  height: 1.4rem;
+}
+
+header .top div a img {
+  height: 100%;
+}
+
+header .search {
+  margin-top: 1.5rem;
+  position: relative;
+  height: 1.5rem;
+  background: linear-gradient(to bottom, #f6c3c8, #f3c8cd);
+}
+
+header .search a {
+  position: absolute;
+  top: 0.25rem;
+  width: calc(100% - 0.9rem);
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.5rem;
+  color: gray;
+  border-radius: 0.5rem;
+  background-color: white;
+  margin: 0 0.45rem;
+}
+
+header .search a::before {
+  font-family: icomoon;
+  content: '\e92a';
+  margin: 0.2rem;
+}
+
+/* 导航模块 */
+.nav {
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(to bottom, #f9cdca, #f5e2e4, #f4edf2, #f6f5fa);
+}
+
+.nav .ulnav {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 0.9rem);
+  height: 5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  margin: 0 0.45rem;
+  overflow: hidden;
+}
+
+.nav .ulnav li {
+  width: 20%;
+  height: 50%;
+}
+
+.nav .ulnav li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav .ulnav li a img {
+  width: 1.5rem;
+}
+
+.nav .ulnav li a span {
+  font-size: 0.4rem;
+}
+
+/* 广告模块 */
+.ad {
+  width: calc(100% - 0.9rem);
+  height: 5rem;
+  border-radius: 0.5rem;
+  margin: 0.25rem 0.45rem 0;
+  background-color: pink;
+}
+
+.ad a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* 热卖模块 */
+.hot {
+  width: calc(100% - 0.9rem);
+  height: 6rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  margin: 0.25rem 0.45rem 0;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.hot .h1,
+.hot .h2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 2.9rem;
+}
+
+.hot .l,
+.hot .r {
+  width: 49%;
+  border-radius: 0.5rem;
+  background: linear-gradient(to bottom, #fde5ec 10%, #fdf6fb 20%, #ffffff);
+  overflow: hidden;
+}
+
+.hot .l .word,
+.hot .r .word {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 1.2rem);
+  height: 0.8rem;
+  margin: 0 0.6rem;
+}
+
+.hot .l .word h3,
+.hot .r .word h3 {
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+
+.hot .l .img,
+.hot .r .img {
+  display: flex;
+  justify-content: space-around;
+  width: calc(100% - 0.5rem);
+  height: 2.1rem;
+  margin: 0 0.25rem;
+}
+
+.hot .l .img a,
+.hot .r .img a {
+  position: relative;
+  width: 2.1rem;
+  height: 2.1rem;
+  text-align: center;
+}
+
+.hot .l .img a img,
+.hot .r .img a img {
+  width: 90%;
+}
+
+.hot .l .img a span,
+.hot .r .img a span {
+  position: absolute;
+  bottom: 0.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  color: #bd704e;
+  font-size: 0.3rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  background-color: #ffebeb;
+  overflow: hidden;
+}
+
+.hot .h1 .l .word {
+  justify-content: flex-start;
+}
+
+.hot .h1 .l .word span {
+  color: white;
+  font-size: 0.3rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-radius: 0.2rem;
+  padding: 0 0.1rem;
+  margin-left: 0.2rem;
+  background-color: #e81822;
+}
+
+.hot .h1 .l .img a span {
+  color: red;
+}
+
+/* 焦点图模块 */
+.focus {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 0.9rem);
+  height: 8rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  margin: 0.25rem 0.45rem 0;
+  overflow: hidden;
+}
+
+.focus .left {
+  width: 49%;
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: url(../uploads/focus1.jpg) no-repeat center;
+  background-size: 100%;
+}
+
+.focus .left img {
+  width: 100%;
+}
+
+.focus .right {
+  width: 49%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.focus .right .up,
+.focus .right .down {
+  width: 100%;
+  height: 3.9rem;
+  border-radius: 0.5rem;
+  background: url(../uploads/focus_r0.png) no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.focus .right .up div,
+.focus .right .down div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.focus .right .up div h3,
+.focus .right .down div h3 {
+  color: white;
+  font-size: 0.5rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  text-align: center;
+}
+
+.focus .right .up div a,
+.focus .right .down div a {
+  position: relative;
+  width: 100%;
+  height: 2.9rem;
+}
+
+.focus .right .up div a img,
+.focus .right .down div a img {
+  position: absolute;
+  top: 0.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+}
+
+.focus .right .up div a span,
+.focus .right .down div a span {
+  position: absolute;
+  bottom: 0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 0.4rem;
+  width: 80%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #ff4a19;
+}
+
+/* 喜欢模块 */
+.love {
+  width: calc(100% - 0.9rem);
+  height: 1.2rem;
+  margin: 0.25rem 0.45rem 0;
+  background: url(../uploads/love.webp) no-repeat center center;
+  background-size: 100%;
+}
+
+/* 商品模块 */
+.goods {
+  width: calc(100% - 0.9rem);
+  margin: 0.25rem 0.45rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.goods li {
+  width: 49%;
+  height: 10rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.2rem;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.goods li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.goods li a img {
+  width: 100%;
+  height: 7rem;
+  vertical-align: bottom;
+}
+
+.goods li a p {
+  height: 1.2rem;
+  line-height: 0.6rem;
+  color: black;
+  font-size: 0.4rem;
+  font-weight: 550;
+  padding: 0 0.1rem;
+  margin: 0.1rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.goods li a .flag {
+  height: 0.5rem;
+  margin: 0.1rem 0;
+}
+
+.goods li a .flag span {
+  float: left;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.3rem;
+  border: 0.01rem solid #ffbb00;
+  border-radius: 0.2rem;
+  background-color: #fefbee;
+  margin: 0 0 0 0.2rem;
+  padding: 0 0.1rem;
+}
+
+.goods li a .flag .zy {
+  color: white;
+  background-color: #ff5500;
+}
+
+.goods li a .price_comment {
+  height: 0.8rem;
+  color: #ff4422;
+  font-size: 0.3rem;
+  font-weight: 550;
+  padding: 0 0.1rem;
+}
+
+.goods li a .price_comment .price {
+  font-size: 0.5rem;
+}
+
+.goods li a .price_comment .comment {
+  color: #999999;
+  font-weight: 400;
+}
+
+/* 底部模块 */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: calc(15rem - 0.9rem);
+  height: 1.2rem;
+  background-color: #ffffff;
+  margin: 0 0.45rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer div {
+  width: 15%;
+  height: 100%;
+}
+
+footer div a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer div a img {
+  width: 0.6rem;
+}
+
+footer div a span {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  color: #666666;
+  font-size: 0.3rem;
+}
