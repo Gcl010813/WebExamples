@@ -1,0 +1,268 @@
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* 左侧模块 */
+header {
+    padding: 0 !important;
+
+    //logo模块
+    .logo {
+        background-color: #3795da;
+
+        a {
+            display: block;
+            //图片不变为块属性 tac即可居中
+            //也可对img添加display:block属性再amrgin居中显示
+            text-align: center;
+
+            img {
+                // 始终保证图片宽度等同父盒子的宽度
+                max-width: 100%;
+            }
+
+            div {
+                font-size: 20px;
+                color: white;
+                height: 40px;
+                line-height: 40px;
+                background-color: #3795da;
+            }
+        }
+    }
+
+    //导航模块
+    ul {
+        background-color: #eceeeb;
+        //清除ul默认的左内边距
+        padding: 0;
+
+        li {
+            height: 36px;
+            line-height: 36px;
+
+            a {
+                display: block;
+                color: grey;
+                padding-left: 15%;
+
+                //引用内置的字体图标
+                &::before {
+                    font-family: 'Glyphicons Halflings';
+                    content: '';
+                    font-size: 16px;
+                    vertical-align: bottom;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    //method.1 小屏幕下的导航模块单独写样式(无法完整平分20%的宽度)
+    // nav {
+    //     height: 50px;
+    //     background-color: #eceeeb;
+
+    //     a {
+    //         display: inline-block;
+    //         width: 19%;
+    //         height: 100%;
+    //         line-height: 50px;
+    //         color: grey;
+    //         font-size: 20px;
+    //         text-align: center;
+
+    //         &::before {
+    //             font-family: 'Glyphicons Halflings';
+    //             content: '';
+    //             font-size: 16px;
+    //             vertical-align: bottom;
+    //             margin-right: 5px;
+    //         }
+    //     }
+    // }
+
+    //method2. 小屏幕下的导航模块
+    @media screen and (max-width:991px) {
+        ul li {
+            float: left;
+            width: 20%;
+            margin: 5px 0;
+
+            a {
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* 中间模块 */
+article {
+
+    //焦点图模块
+    .focus {
+        height: 280px;
+        //上下隔开
+        margin: 10px 0;
+        //ul默认右左内边距
+        padding: 0;
+
+        //设置浮动
+        li {
+            float: left;
+            width: 25%;
+            height: 50%;
+            padding: 0 3px 3px 0;
+
+            a {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    //居中显示
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    //流出左右边距
+                    width: 100%;
+                    height: 100%;
+                }
+
+                p {
+                    //居中显示
+                    position: absolute;
+                    bottom: 5%;
+                    //同图片宽度相同
+                    width: 100%;
+                    height: 30px;
+                    //内容若为两行 则每行各占上下一半
+                    line-height: 15px;
+                    font-size: 15px;
+                    color: gray;
+                    background-color: rgba(0, 0, 0, .2);
+                    //清除p默认的下外边距
+                    margin: 0;
+                }
+            }
+        }
+
+        //重写第一个li相关样式
+        & li:nth-child(1) {
+            width: 50%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            p {
+                bottom: 0;
+                width: 100%;
+                line-height: 30px;
+                font-size: 25px;
+            }
+        }
+
+        //小屏幕下的焦点图模块
+        @media screen and (max-width:991px) {
+            & li:nth-child(1) {
+                width: 100%;
+            }
+
+            & li:nth-child(n+2) {
+                width: 50%;
+            }
+
+            //小屏幕下下图片下移 浮动无法清除 news内row内h3标签上边距异常
+            //添加下外边距 将news模块下移
+            //(可看news模块上边线发觉)
+            margin-bottom: 290px;
+        }
+    }
+
+    //文章模块
+    .news {
+        //新闻模块上边框
+        border-top: 1px solid gray;
+
+        //每一个文章模块
+        .row {
+            //消除父级15px的内边距 下边框同父级对齐
+            margin: 0;
+            //上下边框撑开 
+            padding: 10px 0;
+            //下边框
+            border-bottom: 1px solid gray;
+
+            //文段信息模块
+            .info {
+                //消除右内边距 扩大范围
+                padding-right: 0;
+
+                h3 {
+                    //更改h3默认外边距
+                    margin: 10px 0 0;
+                }
+            }
+
+            .img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (max-width:991px) {
+                .info {
+                    & p:nth-child(-n+3) {
+                        display: none;
+                    }
+                }
+
+                .img {
+                    display: none;
+                }
+            }
+        }
+
+        & .row:last-child {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* 右侧模块 */
+aside {
+    padding: 0 !important;
+
+    .ad {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .hot {
+        border: 1px solid #ebeeeb;
+        padding: 0 10px;
+        margin-bottom: 10px;
+
+        span {
+            display: inline-block;
+            color: white;
+            padding: 3px 15px;
+            background-color: #3d86c9;
+        }
+    }
+}
