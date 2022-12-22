@@ -290,16 +290,14 @@
 
 .footer .middle dl dt {
     font-size: 16px;
+    margin: 5px 0;
 }
 
-.footer .middle dl dd img {
-    /* code尺寸为90x90 dl总行高每个dd(21)*5=105px  上下总空余105-90=15px */
-    /* 为保证dl下划线齐平 对code模块扩大其占位 */
-    margin: 7.5px 0;
+.footer .middle dl dd:last-child {
+    margin-bottom: 5px;
 }
 
 .footer .bottom ul {
-    float: left;
     height: 18px;
     line-height: 18px;
     margin: 20px 166px;
