@@ -1,0 +1,191 @@
+.detail {
+    position: relative;
+    height: 502px;
+    background-color: aqua;
+    border-top: 2px solid red;
+    margin: 30px auto;
+}
+
+.productImg {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+}
+
+.productImg img {
+    width: 100%;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border: 1px solid aqua;
+    background-color: rgb(198, 229, 147);
+    opacity: .6;
+    z-index: 1;
+    display: none;
+}
+
+.bigProductImg {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: 500px;
+    height: 500px;
+    z-index: 2;
+    overflow: hidden;
+    display: none;
+}
+
+.bigProductImg img {
+    position: absolute;
+}
+
+.buy {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: 0;
+}
+
+.buy p {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 5px;
+    margin: 20px 0 10px 0;
+}
+
+.price {
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #b1191a;
+    padding-left: 50px;
+    margin-bottom: 10px;
+}
+
+.info {
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #f30a0a;
+    padding: 0 5px;
+    margin-right: 5px;
+}
+
+.preprice {
+    color: gray;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.buyCount {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+.buyCount input {
+    outline: none;
+    width: 50px;
+    height: 20px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+}
+
+/* 去除input number内的上下箭头 */
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.add,
+.del {
+    position: absolute;
+    right: 145px;
+    height: 10px;
+    line-height: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add {
+    top: 5px;
+}
+
+.del {
+    bottom: 5px;
+}
+
+.total {
+    padding: 0 3px;
+    font-weight: 600;
+    color: red;
+}
+
+.pay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: large;
+    color: white;
+    text-align: center;
+    background-color: #b1191a;
+}
+
+.goodsInfo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 900px;
+    height: 500px;
+}
+
+.goodsHead ul {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.goodsHead ul li {
+    flex: 1;
+    background-color: #eef1ee;
+    cursor: pointer;
+}
+
+.goodsHead .headEye {
+    background-color: #008dcb;
+}
+
+.goodsBody {
+    position: relative;
+}
+
+.goodsBody div {
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    z-index: -1;
+}
+
+.goodsBody .bodyEye {
+    z-index: 1;
+}

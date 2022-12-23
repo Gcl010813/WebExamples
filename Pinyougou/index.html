@@ -22,6 +22,12 @@
 </head>
 
 <body>
+    <!-- 判断是否为移动端 -->
+    <script>
+        if (window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+            location.href = '../MobileJD/index.html';
+        }
+    </script>
     <!-- 顶部导航栏开始 -->
     <section class="w shortcut">
         <!-- <div class="fl">
