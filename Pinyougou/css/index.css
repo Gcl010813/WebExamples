@@ -2,23 +2,84 @@
 .main {
     position: relative;
     width: 980px;
-    height: 440px;
+    height: 455px;
     margin: 10px 0 0 220px;
 }
 
 /* **********焦点图模块 */
+.main .focus {
+    position: absolute;
+    width: 721px;
+    height: 455px;
+    border: 1px solid grey;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.main .focus .left,
+.main .focus .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    text-align: right;
+    opacity: 0.3;
+    z-index: 2;
+    display: none;
+}
+
+.main .focus .left {
+    left: -25px;
+}
+
+.main .focus .right {
+    right: -25px;
+    text-align: left;
+}
+
 .main .focus ul {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 720px;
-    height: 100%;
+    display: flex;
+}
+
+.main .focus ul li {
+    display: block;
+    width: 721px;
+    height: 455px;
 }
 
 .main .focus ul li img {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
+    width: 721px;
+    height: 455px;
+}
+
+.main .focus ol {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c3cddf;
+    border-radius: 6px;
+    display: flex;
+}
+
+.main .focus ol li {
+    width: 12px;
+    height: 12px;
+    background-color: lightcyan;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.main .focus .selected {
+    background-color: aqua;
 }
 
 /* **********快报模块 */
@@ -132,11 +193,12 @@
 }
 
 /* **********广告模块 */
-.main img {
+.main .focus_ad {
     display: block;
     position: absolute;
     bottom: 0;
     right: 0;
+    width: 242px;
 }
 
 /* **************************main()模块结束 */

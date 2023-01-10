@@ -19,19 +19,24 @@
     <link rel="stylesheet" href="css/common.css">
     <!-- 引入自己独有的样式 -->
     <link rel="stylesheet" href="css/index.css">
-</head>
-
-<body>
+    <!-- 引入缓动动画封装函数 -->
+    <script src="js/animate.js"></script>
+    <!-- 引入轮播图js -->
+    <script src="js/focus.js"></script>
     <!-- 判断是否为移动端 -->
     <script>
         if (window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
             location.href = '../MobileJD/index.html';
         }
     </script>
+</head>
+
+<body>
+
     <!-- 顶部导航栏开始 -->
     <section class="w shortcut">
         <!-- <div class="fl">
-            <span>品优购欢迎您!&nbsp;&nbsp;</span><a href="#">请登录&nbsp;&nbsp;</a><a class="signin" href="#">免费注册</a>
+            <span>品优购欢迎您!&nbsp;&nbsp;</span><a href="javascript:;">请登录&nbsp;&nbsp;</a><a class="signin" href="javascript:;">免费注册</a>
         </div> -->
         <ul class="fl">
             <li>品优购欢迎您!&nbsp;&nbsp;</li>
@@ -41,28 +46,28 @@
             </li>
         </ul>
         <!-- <ul class="fr">
-            <li><a href="#">我的订单</a></li>
-            <li class="downrocket"><a href="#">我的品优购</a></li>
-            <li><a href="#">品优购会员</a></li>
-            <li><a href="#">企业采购</a></li>
-            <li class="downrocket"><a href="#">关注品优购</a></li>
-            <li class="downrocket"><a href="#">客户服务</a></li>
-            <li class="downrocket lilast"><a href="#">网站导航</a></li>
+            <li><a href="javascript:;">我的订单</a></li>
+            <li class="downrocket"><a href="javascript:;">我的品优购</a></li>
+            <li><a href="javascript:;">品优购会员</a></li>
+            <li><a href="javascript:;">企业采购</a></li>
+            <li class="downrocket"><a href="javascript:;">关注品优购</a></li>
+            <li class="downrocket"><a href="javascript:;">客户服务</a></li>
+            <li class="downrocket lilast"><a href="javascript:;">网站导航</a></li>
         </ul> -->
         <ul class="fr">
-            <li><a href="#">我的订单</a></li>
+            <li><a href="javascript:;">我的订单</a></li>
             <li></li>
-            <li><a href="#">我的品优购</a><span class="iconfont icon-arrow-down"></span></li>
+            <li><a href="javascript:;">我的品优购</a><span class="iconfont icon-arrow-down"></span></li>
             <li></li>
-            <li><a href="#">品优购会员</a></li>
+            <li><a href="javascript:;">品优购会员</a></li>
             <li></li>
-            <li><a href="#">企业采购</a></li>
+            <li><a href="javascript:;">企业采购</a></li>
             <li></li>
-            <li><a href="#">关注品优购</a><span class="iconfont icon-arrow-down"></span></li>
+            <li><a href="javascript:;">关注品优购</a><span class="iconfont icon-arrow-down"></span></li>
             <li></li>
-            <li><a href="#">客户服务</a><span class="iconfont icon-arrow-down"></span></li>
+            <li><a href="javascript:;">客户服务</a><span class="iconfont icon-arrow-down"></span></li>
             <li></li>
-            <li><a href="#">网站导航</a><span class="iconfont icon-arrow-down"></span></li>
+            <li><a href="javascript:;">网站导航</a><span class="iconfont icon-arrow-down"></span></li>
         </ul>
     </section>
     <!-- 顶部导航栏结束 -->
@@ -84,7 +89,7 @@
         </div>
         <!-- 购物车模块 -->
         <div class="fr shopcar">
-            <a href="#">我的购物车</a>
+            <a href="javascript:;">我的购物车</a>
             <div class="count">5</div>
         </div>
         <!-- 搜索模块|热词模块 -->
@@ -92,13 +97,13 @@
             <input type="search" placeholder="HUAWEI matebook D15">
             <button>搜索</button>
             <ul>
-                <li><a class="color_red" href="#">优惠购首发</a></li>
-                <li><a href="#">亿元优惠</a></li>
-                <li><a href="#">9.9元团购</a></li>
-                <li><a href="#">满99元减30</a></li>
-                <li><a href="#">办公用品</a></li>
-                <li><a href="#">电脑</a></li>
-                <li><a href="#">通信</a></li>
+                <li><a class="color_red" href="javascript:;">优惠购首发</a></li>
+                <li><a href="javascript:;">亿元优惠</a></li>
+                <li><a href="javascript:;">9.9元团购</a></li>
+                <li><a href="javascript:;">满99元减30</a></li>
+                <li><a href="javascript:;">办公用品</a></li>
+                <li><a href="javascript:;">电脑</a></li>
+                <li><a href="javascript:;">通信</a></li>
             </ul>
         </div>
     </div>
@@ -111,34 +116,35 @@
                 <div class="dt">全部商品分类</div>
                 <div class="dd">
                     <ul>
-                        <li><a href="#">家用电器</a></li>
-                        <li><a href="list.html" target="_blank">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
-                        <li><a href="#">电脑</a>、<a href="#">办公</a></li>
-                        <li><a href="#">家居</a>、<a href="#">家具</a></li>
-                        <li><a href="#">男装</a>、<a href="#">女装</a></li>
-                        <li><a href="#">美妆</a>、<a href="#">清洁</a></li>
-                        <li><a href="#">鞋靴</a>、<a href="#">箱包</a></li>
-                        <li><a href="#">运动</a>、<a href="#">钟表</a></li>
-                        <li><a href="#">汽车</a>、<a href="#">五金</a></li>
-                        <li><a href="#">声乐器具</a></li>
-                        <li><a href="#">食品</a>、<a href="#">酒类</a></li>
-                        <li><a href="#">医疗保健</a></li>
-                        <li><a href="#">图书</a>、<a href="#">影像</a></li>
-                        <li><a href="#">充值</a>、<a href="#">彩票</a></li>
-                        <li><a href="#">理财</a>、<a href="#">白条</a></li>
+                        <li><a href="javascript:;">家用电器</a></li>
+                        <li><a href="list.html" target="_blank">手机</a>、<a href="javascript:;">数码</a>、<a
+                                href="javascript:;">通信</a></li>
+                        <li><a href="javascript:;">电脑</a>、<a href="javascript:;">办公</a></li>
+                        <li><a href="javascript:;">家居</a>、<a href="javascript:;">家具</a></li>
+                        <li><a href="javascript:;">男装</a>、<a href="javascript:;">女装</a></li>
+                        <li><a href="javascript:;">美妆</a>、<a href="javascript:;">清洁</a></li>
+                        <li><a href="javascript:;">鞋靴</a>、<a href="javascript:;">箱包</a></li>
+                        <li><a href="javascript:;">运动</a>、<a href="javascript:;">钟表</a></li>
+                        <li><a href="javascript:;">汽车</a>、<a href="javascript:;">五金</a></li>
+                        <li><a href="javascript:;">声乐器具</a></li>
+                        <li><a href="javascript:;">食品</a>、<a href="javascript:;">酒类</a></li>
+                        <li><a href="javascript:;">医疗保健</a></li>
+                        <li><a href="javascript:;">图书</a>、<a href="javascript:;">影像</a></li>
+                        <li><a href="javascript:;">充值</a>、<a href="javascript:;">彩票</a></li>
+                        <li><a href="javascript:;">理财</a>、<a href="javascript:;">白条</a></li>
                     </ul>
                 </div>
             </div>
             <div class="fl navitems">
                 <ul>
-                    <li><a href="#">生鲜</a></li>
-                    <li><a href="#">医药</a></li>
-                    <li><a href="#">服装</a></li>
-                    <li><a href="#">电器</a></li>
-                    <li><a href="#">运动</a></li>
-                    <li><a href="#">家装</a></li>
-                    <li><a href="#">五金</a></li>
-                    <li><a href="#">电子</a></li>
+                    <li><a href="javascript:;">生鲜</a></li>
+                    <li><a href="javascript:;">医药</a></li>
+                    <li><a href="javascript:;">服装</a></li>
+                    <li><a href="javascript:;">电器</a></li>
+                    <li><a href="javascript:;">运动</a></li>
+                    <li><a href="javascript:;">家装</a></li>
+                    <li><a href="javascript:;">五金</a></li>
+                    <li><a href="javascript:;">电子</a></li>
                 </ul>
             </div>
         </div>
@@ -149,44 +155,54 @@
     <div class="w">
         <div class="main">
             <div class="focus">
+                <!-- 左箭头 -->
+                <a href="javascript:;" class="left">←</a>
+                <!-- 右箭头 -->
+                <a href="javascript:;" class="right">→</a>
+                <!-- 图片区域 -->
                 <ul>
-                    <li><img src="upload/logobg.png" alt=""></li>
+                    <li><a href="javascript:;"><img src="upload/focus1.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="upload/focus2.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="upload/focus3.jpg" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="upload/focus4.jpg" alt=""></a></li>
                 </ul>
+                <!-- 圆点区域 -->
+                <ol></ol>
             </div>
             <div class="news">
                 <div class="newstitle">
                     <h3>品优购快报</h3>
-                    <a href="#">更多</a>
+                    <a href="javascript:;">更多</a>
                 </div>
                 <div class="newsbody">
                     <ul>
-                        <li><a href="#">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
-                        <li><a href="#">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
-                        <li><a href="#">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
-                        <li><a href="#">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
-                        <li><a href="#">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
+                        <li><a href="javascript:;">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
+                        <li><a href="javascript:;">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
+                        <li><a href="javascript:;">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
+                        <li><a href="javascript:;">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
+                        <li><a href="javascript:;">[重磅!!!]Pink老师最爱的颜色是粉红色!</a></li>
                     </ul>
                 </div>
                 <div class="newsfooter">
                     <ul>
-                        <li><a href="#"><span>充值</span></a></li>
-                        <li><a href="#"><span>机票</span></a></li>
-                        <li><a href="#"><span>电影票</span></a></li>
-                        <li><a href="#"><span>游戏券</span></a></li>
-                        <li><a href="#"><span>彩票</span></a></li>
-                        <li><a href="#"><span>加油</span></a></li>
-                        <li><a href="#"><span>充电</span></a></li>
-                        <li><a href="#"><span>火车票</span></a></li>
-                        <li><a href="#"><span>储蓄</span></a></li>
-                        <li><a href="#"><span>RMB</span></a></li>
-                        <li><a href="#"><span>银行</span></a></li>
-                        <li><a href="#"><span>白条</span></a></li>
+                        <li><a href="javascript:;"><span>充值</span></a></li>
+                        <li><a href="javascript:;"><span>机票</span></a></li>
+                        <li><a href="javascript:;"><span>电影票</span></a></li>
+                        <li><a href="javascript:;"><span>游戏券</span></a></li>
+                        <li><a href="javascript:;"><span>彩票</span></a></li>
+                        <li><a href="javascript:;"><span>加油</span></a></li>
+                        <li><a href="javascript:;"><span>充电</span></a></li>
+                        <li><a href="javascript:;"><span>火车票</span></a></li>
+                        <li><a href="javascript:;"><span>储蓄</span></a></li>
+                        <li><a href="javascript:;"><span>RMB</span></a></li>
+                        <li><a href="javascript:;"><span>银行</span></a></li>
+                        <li><a href="javascript:;"><span>白条</span></a></li>
                     </ul>
                     <span class="del">减</span>
                     <span class="deltriangle"></span>
                 </div>
             </div>
-            <img src="upload/bargain.png" alt="">
+            <img src="upload/bargain.png" alt="" class="focus_ad">
         </div>
     </div>
     <!-- main()模块结束 -->
@@ -195,13 +211,13 @@
     <div class="w recommend">
         <div class="fl recomL"></div>
         <ul class="fl recomR">
-            <li><a href="#"><img src="upload/recom_product.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="upload/recom_product.png" alt=""></a></li>
             <li></li>
-            <li><a href="#"><img src="upload/recom_product.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="upload/recom_product.png" alt=""></a></li>
             <li></li>
-            <li><a href="#"><img src="upload/recom_product.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="upload/recom_product.png" alt=""></a></li>
             <li></li>
-            <li><a href="#"><img src="upload/recom_product.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="upload/recom_product.png" alt=""></a></li>
         </ul>
     </div>
     <!-- 推荐模块结束 -->
@@ -216,17 +232,17 @@
                     <ul>
                         <li><a class="color_red" href=" #">热门</a></li>
                         <li></li>
-                        <li><a href="#">大家电</a></li>
+                        <li><a href="javascript:;">大家电</a></li>
                         <li></li>
-                        <li><a href="#">生活电器</a></li>
+                        <li><a href="javascript:;">生活电器</a></li>
                         <li></li>
-                        <li><a href="#">厨房电器</a></li>
+                        <li><a href="javascript:;">厨房电器</a></li>
                         <li></li>
-                        <li><a href="#">个人健康</a></li>
+                        <li><a href="javascript:;">个人健康</a></li>
                         <li></li>
-                        <li><a href="#">空气/净水</a></li>
+                        <li><a href="javascript:;">空气/净水</a></li>
                         <li></li>
-                        <li><a href="#">运动器材</a></li>
+                        <li><a href="javascript:;">运动器材</a></li>
                     </ul>
                 </div>
             </div>
@@ -236,29 +252,29 @@
                         <li>
                             <div class="navfast">
                                 <ul>
-                                    <li><a href="#">节能补贴</a></li>
-                                    <li><a href="#">4k电视</a></li>
-                                    <li><a href="#">空气净化器</a></li>
-                                    <li><a href="#">长虹电饭煲</a></li>
-                                    <li><a href="#">滚筒洗衣机</a></li>
-                                    <li><a href="#">美的热水器</a></li>
+                                    <li><a href="javascript:;">节能补贴</a></li>
+                                    <li><a href="javascript:;">4k电视</a></li>
+                                    <li><a href="javascript:;">空气净化器</a></li>
+                                    <li><a href="javascript:;">长虹电饭煲</a></li>
+                                    <li><a href="javascript:;">滚筒洗衣机</a></li>
+                                    <li><a href="javascript:;">美的热水器</a></li>
                                 </ul>
                             </div>
-                            <a href="#"><img src="upload/floor-1-1.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-1.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/floor-1-2.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-2.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/floor-1-3.png" alt=""></a>
-                            <a href="#"><img src="upload/floor-1-4.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-3.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-4.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/floor-1-5.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-5.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/floor-1-6.png" alt=""></a>
-                            <a href="#"><img src="upload/floor-1-7.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-6.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-7.png" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -272,17 +288,17 @@
                     <ul>
                         <li><a class="color_red" href=" #">热门</a></li>
                         <li></li>
-                        <li><a href="#">Apple</a></li>
+                        <li><a href="javascript:;">Apple</a></li>
                         <li></li>
-                        <li><a href="#">Huawei</a></li>
+                        <li><a href="javascript:;">Huawei</a></li>
                         <li></li>
-                        <li><a href="#">Xiaomi</a></li>
+                        <li><a href="javascript:;">Xiaomi</a></li>
                         <li></li>
-                        <li><a href="#">OPPO</a></li>
+                        <li><a href="javascript:;">OPPO</a></li>
                         <li></li>
-                        <li><a href="#">Vivo</a></li>
+                        <li><a href="javascript:;">Vivo</a></li>
                         <li></li>
-                        <li><a href="#">Realme</a></li>
+                        <li><a href="javascript:;">Realme</a></li>
                     </ul>
                 </div>
             </div>
@@ -292,29 +308,29 @@
                         <li>
                             <div class="navfast">
                                 <ul>
-                                    <li><a href="#">高价回收</a></li>
-                                    <li><a href="#">全面屏</a></li>
-                                    <li><a href="#">5000mha</a></li>
-                                    <li><a href="#">1亿像素</a></li>
-                                    <li><a href="#">Type-c</a></li>
-                                    <li><a href="#">100w Max</a></li>
+                                    <li><a href="javascript:;">高价回收</a></li>
+                                    <li><a href="javascript:;">全面屏</a></li>
+                                    <li><a href="javascript:;">5000mha</a></li>
+                                    <li><a href="javascript:;">1亿像素</a></li>
+                                    <li><a href="javascript:;">Type-c</a></li>
+                                    <li><a href="javascript:;">100w Max</a></li>
                                 </ul>
                             </div>
-                            <a href="#"><img src="upload/floor-1-1.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-1.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/floor-1-2.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-2.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/floor-1-3.png" alt=""></a>
-                            <a href="#"><img src="upload/floor-1-4.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-3.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-4.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/floor-1-5.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-5.png" alt=""></a>
                         </li>
                         <li>
-                            <a href="#"><img src="upload/floor-1-6.png" alt=""></a>
-                            <a href="#"><img src="upload/floor-1-7.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-6.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-7.png" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -361,30 +377,30 @@
             <div class="middle clearfix">
                 <dl>
                     <dt>服务指南</dt>
-                    <dd><a href="#">购物流程</a></dd>
-                    <dd><a href="#">会员介绍</a></dd>
-                    <dd><a href="#">生活旅行/团购</a></dd>
-                    <dd><a href="#">常见问题</a></dd>
-                    <dd><a href="#">大家电</a></dd>
-                    <dd><a href="#">联系客服</a></dd>
+                    <dd><a href="javascript:;">购物流程</a></dd>
+                    <dd><a href="javascript:;">会员介绍</a></dd>
+                    <dd><a href="javascript:;">生活旅行/团购</a></dd>
+                    <dd><a href="javascript:;">常见问题</a></dd>
+                    <dd><a href="javascript:;">大家电</a></dd>
+                    <dd><a href="javascript:;">联系客服</a></dd>
                 </dl>
                 <dl>
                     <dt>服务指南</dt>
-                    <dd><a href="#">购物流程</a></dd>
-                    <dd><a href="#">会员介绍</a></dd>
-                    <dd><a href="#">生活旅行/团购</a></dd>
-                    <dd><a href="#">常见问题</a></dd>
-                    <dd><a href="#">大家电</a></dd>
-                    <dd><a href="#">联系客服</a></dd>
+                    <dd><a href="javascript:;">购物流程</a></dd>
+                    <dd><a href="javascript:;">会员介绍</a></dd>
+                    <dd><a href="javascript:;">生活旅行/团购</a></dd>
+                    <dd><a href="javascript:;">常见问题</a></dd>
+                    <dd><a href="javascript:;">大家电</a></dd>
+                    <dd><a href="javascript:;">联系客服</a></dd>
                 </dl>
                 <dl>
                     <dt>服务指南</dt>
-                    <dd><a href="#">购物流程</a></dd>
-                    <dd><a href="#">会员介绍</a></dd>
-                    <dd><a href="#">生活旅行/团购</a></dd>
-                    <dd><a href="#">常见问题</a></dd>
-                    <dd><a href="#">大家电</a></dd>
-                    <dd><a href="#">联系客服</a></dd>
+                    <dd><a href="javascript:;">购物流程</a></dd>
+                    <dd><a href="javascript:;">会员介绍</a></dd>
+                    <dd><a href="javascript:;">生活旅行/团购</a></dd>
+                    <dd><a href="javascript:;">常见问题</a></dd>
+                    <dd><a href="javascript:;">大家电</a></dd>
+                    <dd><a href="javascript:;">联系客服</a></dd>
                 </dl>
                 <dl>
                     <dt>帮助中心</dt>
@@ -396,29 +412,29 @@
             </div>
             <div class="bottom clearfix">
                 <ul>
-                    <li><a href="#">关于我们</a></li>
+                    <li><a href="javascript:;">关于我们</a></li>
                     <li></li>
-                    <li><a href="#">联系我们</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
                     <li></li>
-                    <li><a href="#">联系客服</a></li>
+                    <li><a href="javascript:;">联系客服</a></li>
                     <li></li>
-                    <li><a href="#">商家入驻</a></li>
+                    <li><a href="javascript:;">商家入驻</a></li>
                     <li></li>
-                    <li><a href="#">营销中心</a></li>
+                    <li><a href="javascript:;">营销中心</a></li>
                     <li></li>
-                    <li><a href="#">手机品优购</a></li>
+                    <li><a href="javascript:;">手机品优购</a></li>
                     <li></li>
-                    <li><a href="#">友情链接</a></li>
+                    <li><a href="javascript:;">友情链接</a></li>
                     <li></li>
-                    <li><a href="#">销售联盟</a></li>
+                    <li><a href="javascript:;">销售联盟</a></li>
                     <li></li>
-                    <li><a href="#">品优购社区</a></li>
+                    <li><a href="javascript:;">品优购社区</a></li>
                     <li></li>
-                    <li><a href="#">品优购公益</a></li>
+                    <li><a href="javascript:;">品优购公益</a></li>
                     <li></li>
-                    <li><a href="#">English Site</a></li>
+                    <li><a href="javascript:;">English Site</a></li>
                     <li></li>
-                    <li><a href="#">Contact U</a></li>
+                    <li><a href="javascript:;">Contact U</a></li>
                 </ul>
                 <p>地址:M78星云光之国 邮编:010101 传真:0101-1111 邮箱:m78country@163.com</p>
                 <p>光ICP备20221020号</p>
