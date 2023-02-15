@@ -224,13 +224,57 @@ header .search i::before {
 }
 
 /* 广告图模块 */
-.adimg a {
-    display: block;
+
+li {
+    list-style: none;
+}
+
+.adimg {
+    position: relative;
     width: 100%;
     height: 150px;
+    overflow: hidden;
+}
+
+.adimg ul {
+    position: absolute;
+    /* 移动端特殊情况 为实现无缝滚动 需要比图片数量多两个位置 */
+    width: 500%;
+    margin-left: -100%;
+
+}
+
+.adimg ul li {
+    float: left;
+    width: 540px;
+    height: 150px;
     border-radius: 10px;
-    background: url(../uploads/ad.png);
-    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.adimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.adimg ol {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.adimg ol li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: red;
+    margin: 0 3px;
+}
+
+.adimg .sel {
+    width: 20px;
 }
 
 
