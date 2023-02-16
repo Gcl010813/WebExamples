@@ -99,5 +99,41 @@ window.addEventListener('load', function () {
             ul.style.transition = 'all .5s';
             ul.style.transform = `translateX(${-indexImg * imgWidth}px)`;
         }, 2000);
-    })
+    });
+
+
+
+    /* 返回顶部模块 */
+    var d = document.querySelector('.goBack');
+    var h = document.querySelector('.hot');
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset >= h.offsetTop) {
+            d.style.display = 'block';
+        }
+        else {
+            d.style.display = 'none';
+        }
+    });
+    //滚动回顶部模块
+    var scrollTimer = null;
+    var step = 0;
+    d.addEventListener('click', function () {
+        scrollTimer = setInterval(function () {
+            step = Math.floor((0 - window.pageYOffset) / 10);
+            if (window.pageYOffset == 0) {
+                clearInterval(scrollTimer);
+            }
+            else {
+                // scroll(X轴距离 Y轴距离)
+                window.scroll(0, window.pageYOffset + step);
+            }
+        }, 15);
+    });
+
 })
+/* 解决click300ms延迟问题 */
+if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+    }, false);
+}
