@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <!-- 引入自身的样式 -->
     <link rel="stylesheet" href="css/index.css">
+    <!-- 引入swiper轮播图组件 -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- 引入自身js文件 -->
+    <script src="js/index.js"></script>
 </head>
 
 <body>
@@ -26,20 +31,20 @@
                 <img src="images/logo.png" alt="">
             </li>
             <li>
-                <a href="#">打开京东App,购物更轻松</a>
+                <a href="javascript:;">打开京东App,购物更轻松</a>
             </li>
             <li>
-                <a href="#">立即打开</a>
+                <a href="javascript:;">立即打开</a>
             </li>
         </ul>
     </header>
 
     <!-- 搜素模块 -->
     <section class="top">
-        <a href="#">
+        <a href="javascript:;">
             <img src="images/horizon.png" alt="">
         </a>
-        <a href="#">登录</a>
+        <a href="javascript:;">登录</a>
         <div class="search">
             <div class="img"></div>
             <input type="text" placeholder="Remale X7 Pro">
@@ -48,46 +53,61 @@
 
     <!-- 商品模块 -->
     <div class="main">
-        <!-- 焦点图模块 -->
-        <div class="focusimg">
-            <a href="#">
-                <img src="uploads/ad.dpg" alt="">
-            </a>
+        <!-- swiper轮播图模块 -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="javascript:;"><img src="uploads/banner.dpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;"><img src="uploads/banner1.dpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;"><img src="uploads/banner2.dpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;"><img src="uploads/banner3.dpg" alt=""></a>
+                </div>
+            </div>
+            <!-- 轮播图页码 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
         <!-- 热卖商品模块 -->
         <div class="hotgoods">
-            <a href="#">
+            <a href="javascript:;">
                 <img src="uploads/pic1.dpg" alt="">
             </a>
-            <a href="#">
+            <a href="javascript:;">
                 <img src="uploads/pic2.dpg" alt="">
             </a>
-            <a href="#">
+            <a href="javascript:;">
                 <img src="uploads/pic3.dpg" alt="">
             </a>
         </div>
         <!-- 商品快速导航模块 -->
         <ul class="navgoods">
-            <li><a href="#"><img src="uploads/nav1.png" alt=""><span>京东超市</span></a></li>
-            <li><a href="#"><img src="uploads/nav2.png" alt=""><span>数码电器</span></a></li>
-            <li><a href="#"><img src="uploads/nav3.png" alt=""><span>京东新百货</span></a></li>
-            <li><a href="#"><img src="uploads/nav4.png" alt=""><span>京东生鲜</span></a></li>
-            <li><a href="#"><img src="uploads/nav5.png" alt=""><span>京东到家</span></a></li>
-            <li><a href="#"><img src="uploads/nav6.png" alt=""><span>京东缴费</span></a></li>
-            <li><a href="#"><img src="uploads/nav7.png" alt=""><span>附件好店</span></a></li>
-            <li><a href="#"><img src="uploads/nav8.png" alt=""><span>领券</span></a></li>
-            <li><a href="#"><img src="uploads/nav9.png" alt=""><span>PLUS会员</span></a></li>
-            <li><a href="#"><img src="uploads/nav10.png" alt=""><span>京东国际</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav1.png" alt=""><span>京东超市</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav2.png" alt=""><span>数码电器</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav3.png" alt=""><span>京东新百货</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav4.png" alt=""><span>京东生鲜</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav5.png" alt=""><span>京东到家</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav6.png" alt=""><span>京东缴费</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav7.png" alt=""><span>附件好店</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav8.png" alt=""><span>领券</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav9.png" alt=""><span>PLUS会员</span></a></li>
+            <li><a href="javascript:;"><img src="uploads/nav10.png" alt=""><span>京东国际</span></a></li>
         </ul>
         <!-- 商品广告模块 -->
-        <div class="adgoods">
-            <a href="#"><img src="uploads/new1.dpg" alt=""></a>
-            <a href="#"><img src="uploads/new2.dpg" alt=""></a>
-            <a href="#"><img src="uploads/new3.dpg" alt=""></a>
+        <div class="adgoods clearfix">
+            <a href="javascript:;"><img src="uploads/new1.dpg" alt=""></a>
+            <a href="javascript:;"><img src="uploads/new2.dpg" alt=""></a>
+            <a href="javascript:;"><img src="uploads/new3.dpg" alt=""></a>
         </div>
         <!-- 商品详情模块 -->
         <ul class="goods">
-            <li><a href="#">
+            <li><a href="javascript:;">
                     <img src="uploads/product1.dpg.webp" alt="">
                     <p>强生汽车贴膜 玻璃防晒膜 隔热膜 车膜 汽车膜</p>
                     <div class="price">
@@ -97,10 +117,10 @@
                     <div class="info">
                         <span>自营</span>
                         <span>2万+条评论</span>
-                        <a href="#">看相似</a>
+                        <a href="javascript:;">看相似</a>
                     </div>
                 </a></li>
-            <li><a href="#">
+            <li><a href="javascript:;">
                     <img src="uploads/product2.dpg.webp" alt="">
                     <p>闪魔 苹果14Pro max手机壳 iPhone14手机</p>
                     <div class="price">
@@ -109,10 +129,10 @@
                     </div>
                     <div class="info">
                         <span>京东物流</span>
-                        <a href="#">看相似</a>
+                        <a href="javascript:;">看相似</a>
                     </div>
                 </a></li>
-            <li><a href="#">
+            <li><a href="javascript:;">
                     <img src="uploads/product3.dpg.webp" alt="">
                     <p>闪魔 苹果13钢化膜 iPhone13手机</p>
                     <div class="price">
@@ -121,10 +141,10 @@
                     </div>
                     <div class="info">
                         <span>京东物流</span>
-                        <a href="#">看相似</a>
+                        <a href="javascript:;">看相似</a>
                     </div>
                 </a></li>
-            <li><a href="#">
+            <li><a href="javascript:;">
                     <img src="uploads/product4.dpg.webp" alt="">
                     <p>罗技(Logitech) M221轻音鼠标 无线蓝牙鼠标</p>
                     <div class="price">
@@ -133,7 +153,7 @@
                     </div>
                     <div class="info">
                         <span>自营</span>
-                        <a href="#">看相似</a>
+                        <a href="javascript:;">看相似</a>
                     </div>
                 </a></li>
         </ul>

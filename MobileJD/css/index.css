@@ -114,7 +114,8 @@ body {
 /* ******************************搜素模块 */
 .top {
     /* 搜素框采用固定定位 务必添加宽|高度且通过设置max|min开控制范围 */
-    position: fixed;
+    position: sticky;
+    top: 0;
     min-width: inherit;
     max-width: inherit;
     width: 100%;
@@ -123,6 +124,7 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, .5);
     overflow: hidden;
+    z-index: 10;
 }
 
 /* 设置总体样式 */
@@ -212,15 +214,73 @@ body {
 
 
 /* ******************************商品模块 */
-/* 焦点图模块 */
-.focusimg a {
-    /* k扩大点击范围 */
-    display: block;
+.main {
+    margin-top: -50px;
 }
 
-/* 图片大小同父级盒子一样 */
-.focusimg a img {
+/* swiper轮播图模块 */
+.swiper {
     width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* 热卖商品模块 */
