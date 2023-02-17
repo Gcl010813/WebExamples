@@ -83,14 +83,14 @@ article .focus li {
   padding: 0 3px 3px 0;
 }
 
-article .focus li a {
+article .focus li>a {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
 
-article .focus li a img {
+article .focus li>a img {
   position: absolute;
   top: 0;
   left: 50%;
@@ -99,7 +99,7 @@ article .focus li a img {
   height: 100%;
 }
 
-article .focus li a p {
+article .focus li>a p {
   position: absolute;
   bottom: 5%;
   width: 100%;
@@ -116,18 +116,6 @@ article .focus li:nth-child(1) {
   height: 100%;
 }
 
-article .focus li:nth-child(1) img {
-  width: 100%;
-  height: 100%;
-}
-
-article .focus li:nth-child(1) p {
-  bottom: 0;
-  width: 100%;
-  line-height: 30px;
-  font-size: 25px;
-}
-
 @media screen and (max-width: 991px) {
   article .focus {
     margin-bottom: 290px;
@@ -140,6 +128,29 @@ article .focus li:nth-child(1) p {
   article .focus li:nth-child(n+2) {
     width: 50%;
   }
+}
+
+article .carousel {
+  width: 100%;
+  height: 280px;
+}
+
+article .carousel img {
+  width: 100% !important;
+  height: 280px !important;
+}
+
+article .carousel-caption {
+  padding: 0;
+}
+
+article .carousel-caption p {
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
+  font-size: 20px;
+  margin-bottom: 0;
 }
 
 article .news {
