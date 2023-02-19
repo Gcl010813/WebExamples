@@ -14,6 +14,9 @@ li {
 
 img {
     vertical-align: bottom;
+    /* 大小等于盒子显示的大小 */
+    width: 500px;
+    height: 700px;
 }
 
 .Carousel {
@@ -21,10 +24,8 @@ img {
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    /* width: 418px;
-    height: 262px; */
-    width: 1082px;
-    height: 1442px;
+    width: 500px;
+    height: 700px;
     border: 1px gray solid;
     overflow: hidden;
 }
@@ -34,14 +35,14 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px;
-    height: 25px;
-    line-height: 25px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     border-radius: 0 50% 50% 0;
-    background-color: gray;
-    opacity: .7;
-    font-size: 20px;
-    color: black;
+    background-color: aqua;
+    opacity: .5;
+    font-size: 30px;
+    color: white;
     text-align: center;
     z-index: 2;
     display: none;
