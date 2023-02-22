@@ -1,0 +1,192 @@
+.goodsCar {
+    width: 1200px;
+    margin: 10px auto;
+}
+
+/* 最上方 全部商品 文字 */
+.goodsCar>span {
+    color: rgb(206, 30, 24);
+    font-weight: 700;
+    border-bottom: 2px solid rgb(206, 30, 24);
+}
+
+/* 商品购物车整体模块宽度 */
+.goods {
+    width: 100%;
+}
+
+/* 商品头 模块 */
+.goods thead {
+    height: 50px;
+    line-height: 50px;
+    background-color: #f0f3f0;
+    font-weight: 600;
+}
+
+.goods .selAll {
+    margin-right: 5px;
+}
+
+/* 每一行 flex布局 */
+.goods tr {
+    display: flex;
+    border-bottom: 1px solid grey;
+}
+
+/* 默认每一列占据1份 水平垂直居中 */
+.goods td {
+    flex: 1;
+    text-align: center;
+    align-self: center;
+}
+
+/* 第一列 占据 0.5份 */
+.goods tr td:first-child {
+    flex: .5;
+}
+
+/* 第二列 商品展示模块 占据 3份 */
+.goods tr td:nth-child(2) {
+    flex: 3;
+}
+
+/* 最后一列 占据 0.5份 */
+.goods tr td:last-child {
+    flex: .5;
+}
+
+input {
+    vertical-align: middle;
+}
+
+.good {
+    height: 150px;
+}
+
+/* 商品信息模块 */
+.good .goodInfo {
+    position: relative;
+    width: 400px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: rgb(192, 188, 188);
+    margin: auto;
+}
+
+.good .goodInfo img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.good .goodInfo p {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 270px;
+    height: 100px;
+    text-align: left
+}
+
+/* 数量模块 */
+.good .num {
+    position: relative;
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.good .num span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.good .num .del {
+    left: 0;
+    border-right: 0;
+}
+
+.good .num .add {
+    left: 80px;
+    border-left: 0;
+}
+
+.good .num input {
+    position: absolute;
+    left: 20px;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid gray;
+    vertical-align: bottom;
+}
+
+/* 数量input 取消默认箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+}
+
+/* 小计模块样式 */
+.good .total {
+    font-weight: 700;
+    color: red;
+}
+
+.goodsCar .goodsInfo {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    line-height: 50px;
+    border: 1px solid gray;
+    border-right: 0;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.goodsInfo .left {
+    position: absolute;
+    left: 0;
+}
+
+.goodsInfo .left input {
+    margin: 0 5px 0 20px;
+}
+
+.goodsInfo .left .removeSelected {
+    margin: 0 10px 0 20px;
+}
+
+.goodsInfo .right {
+    position: absolute;
+    right: 0;
+}
+
+.goodsInfo .right strong {
+    color: red;
+    margin: 0 3px;
+}
+
+.goodsInfo .right .paymoney {
+    margin: 0 20px;
+}
+
+.goodsInfo .right a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}

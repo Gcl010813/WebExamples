@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品优购商场-购物车</title>
+    <meta name="description" content="品优购商场-低价好物,尽快来购!">
+    <meta name="keywords" content="笔记本,手机,电视,智能家居...">
+    <!-- 网页名称前的图标 .ico文件 -->
+    <link rel="shoutcut icon" href="favicon.ico">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="font/iconfont.css">
+    <!-- 引入初始化样式 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入共同样式 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入自己独有的样式 -->
+    <link rel="stylesheet" href="css/car.css">
+    <!-- 引入jQuery库 -->
+    <script src="js/jquery3.6.3.min.js"></script>
+    <!-- 引入自身的js文件 -->
+    <script src="js/car.js"></script>
+    <!-- 判断是否为移动端 -->
+    <script>
+        if (window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+            location.href = '../MobileJD/index.html';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="w">
+        <!-- 顶部导航栏开始 -->
+        <section class="shortcut">
+            <ul class="fl">
+                <li>品优购欢迎您!&nbsp;&nbsp;</li>
+                <li>
+                    <a style="color:#c81523 ;" href="login.html">请登录&nbsp;&nbsp;</a>
+                    <a style="color:#c81523 ;" href="register.html">免费注册</a>
+                </li>
+            </ul>
+            <ul class="fr">
+                <li><a href="#">我的订单</a></li>
+                <li></li>
+                <li><a href="#">我的品优购</a><span class="iconfont icon-arrow-down"></span></li>
+                <li></li>
+                <li><a href="#">品优购会员</a></li>
+                <li></li>
+                <li><a href="#">企业采购</a></li>
+                <li></li>
+                <li><a href="#">关注品优购</a><span class="iconfont icon-arrow-down"></span></li>
+                <li></li>
+                <li><a href="#">客户服务</a><span class="iconfont icon-arrow-down"></span></li>
+                <li></li>
+                <li><a href="#">网站导航</a><span class="iconfont icon-arrow-down"></span></li>
+            </ul>
+        </section>
+        <!-- 顶部导航栏结束 -->
+        <!-- 头部模块开始 -->
+        <header>
+            <a href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
+        </header>
+        <!-- 头部模块结束 -->
+
+        <!-- 购物车模块开始 -->
+        <section class="goodsCar">
+            <span>全部商品</span>
+            <table class="goods">
+                <thead>
+                    <tr>
+                        <td><input type="checkbox" name="" id="" class="selAll">全选</td>
+                        <td>商品</td>
+                        <td>单价</td>
+                        <td>数量</td>
+                        <td>小计</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="good">
+                        <td>
+                            <input type="checkbox" name="" id="" class="sel">
+                        </td>
+                        <td>
+                            <div class="goodInfo">
+                                <img src="upload/focus1.jpg" alt="">
+                                <p>图书图书图书1</p>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="price">&yen;11.11</p>
+                        </td>
+                        <td>
+                            <div class="num">
+                                <span class="del">－</span>
+                                <input type="number" value="1">
+                                <span class="add">＋</span>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="total">&yen;<strong>11.11</strong></p>
+                        </td>
+                        <td>
+                            <button class="remove">删除</button>
+                        </td>
+                    </tr>
+                    <tr class="good">
+                        <td>
+                            <input type="checkbox" name="" id="" class="sel">
+                        </td>
+                        <td>
+                            <div class="goodInfo">
+                                <img src="upload/focus2.jpg" alt="">
+                                <p>图书图书图书2</p>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="price">&yen;22.22</p>
+                        </td>
+                        <td>
+                            <div class="num">
+                                <span class="del">－</span>
+                                <input type="number" value="1">
+                                <span class="add">＋</span>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="total">&yen;<strong>22.22</strong></p>
+                        </td>
+                        <td>
+                            <button class="remove">删除</button>
+                        </td>
+                    </tr>
+                    <tr class="good">
+                        <td>
+                            <input type="checkbox" name="" id="" class="sel">
+                        </td>
+                        <td>
+                            <div class="goodInfo">
+                                <img src="upload/focus3.jpg" alt="">
+                                <p>图书图书图书3</p>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="price">&yen;33.33</p>
+                        </td>
+                        <td>
+                            <div class="num">
+                                <span class="del">－</span>
+                                <input type="number" value="1">
+                                <span class="add">＋</span>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="total">&yen;<strong>33.33</strong></p>
+                        </td>
+                        <td>
+                            <button class="remove">删除</button>
+                        </td>
+                    </tr>
+                    <tr class="good">
+                        <td>
+                            <input type="checkbox" name="" id="" class="sel">
+                        </td>
+                        <td>
+                            <div class="goodInfo">
+                                <img src="upload/focus4.jpg" alt="">
+                                <p>图书图书图书3</p>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="price">&yen;44.44</p>
+                        </td>
+                        <td>
+                            <div class="num">
+                                <span class="del">－</span>
+                                <input type="number" value="1">
+                                <span class="add">＋</span>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="total">&yen;<strong>44.44</strong></p>
+                        </td>
+                        <td>
+                            <button class="remove">删除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="goodsInfo">
+                <div class="left">
+                    <input type="checkbox" name="" id="" class="selAll">全选
+                    <button class="removeSelected">删除选中物品</button>
+                    <button class="clearCar">清理购物车</button>
+                </div>
+                <div class="right">
+                    <span class="selected">已选择<strong>0</strong>件商品</span>
+                    <span class="paymoney">总价:<strong>&yen;0</strong></span>
+                    <a href="javascript:;">结算</a>
+                </div>
+            </div>
+        </section>
+        <!-- 购物车模块结束 -->
+        <!-- footer底部模块开始 -->
+        <div class="footer">
+            <div class="w">
+                <div class="top clearfix">
+                    <ul>
+                        <li>
+                            <h5 class="fl"></h5>
+                            <div class="fl text">
+                                <h4>正品保障</h4>
+                                <p>提供发票</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h5 class="fl"></h5>
+                            <div class="fl text">
+                                <h4>正品保障</h4>
+                                <p>提供发票</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h5 class="fl"></h5>
+                            <div class="fl text">
+                                <h4>正品保障</h4>
+                                <p>提供发票</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h5 class="fl"></h5>
+                            <div class="fl text">
+                                <h4>正品保障</h4>
+                                <p>提供发票</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="middle clearfix">
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">会员介绍</a></dd>
+                        <dd><a href="#">生活旅行/团购</a></dd>
+                        <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">会员介绍</a></dd>
+                        <dd><a href="#">生活旅行/团购</a></dd>
+                        <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">会员介绍</a></dd>
+                        <dd><a href="#">生活旅行/团购</a></dd>
+                        <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>帮助中心</dt>
+                        <dd>
+                            <img src="images/code.png" alt="">
+                        </dd>
+                        <dd>品优购客户端</dd>
+                    </dl>
+                </div>
+                <div class="bottom clearfix">
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li></li>
+                        <li><a href="#">商家入驻</a></li>
+                        <li></li>
+                        <li><a href="#">营销中心</a></li>
+                        <li></li>
+                        <li><a href="#">手机品优购</a></li>
+                        <li></li>
+                        <li><a href="#">友情链接</a></li>
+                        <li></li>
+                        <li><a href="#">销售联盟</a></li>
+                        <li></li>
+                        <li><a href="#">品优购社区</a></li>
+                        <li></li>
+                        <li><a href="#">品优购公益</a></li>
+                        <li></li>
+                        <li><a href="#">English Site</a></li>
+                        <li></li>
+                        <li><a href="#">Contact U</a></li>
+                    </ul>
+                    <p>地址:M78星云光之国 邮编:010101 传真:0101-1111 邮箱:m78country@163.com</p>
+                    <p>光ICP备20221020号</p>
+                </div>
+            </div>
+        </div>
+        <!-- footer底部模块结束 -->
+    </div>
+</body>
+
+</html>
