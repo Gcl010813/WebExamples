@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="css/index.css">
     <!-- 引入缓动动画封装函数 -->
     <script src="js/animate.js"></script>
-    <!-- 引入轮播图js -->
-    <script src="js/focus.js"></script>
+    <!-- 引入jQ库 -->
+    <script src="js/jquery3.6.3.min.js"></script>
+    <!-- 引入自身js文件 -->
+    <script src="js/index.js"></script>
     <!-- 判断是否为移动端 -->
     <script>
         if (window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
@@ -211,14 +213,14 @@
     <!-- 推荐模块结束 -->
 
     <!-- floor模块开始 -->
-    <div class="w floor">
+    <div class="w floors">
         <!-- 家电模块 -->
-        <div class="f1jiadian">
+        <div class="floor f1">
             <div class="box_hd">
                 <h2 class="fl">家用电器</h2>
                 <div class="fr tab_list">
                     <ul>
-                        <li><a class="color_red" href=" #">热门</a></li>
+                        <li><a class="color_red" href="javascript:;">热门</a></li>
                         <li></li>
                         <li><a href="javascript:;">大家电</a></li>
                         <li></li>
@@ -269,7 +271,7 @@
             </div>
         </div>
         <!-- 手机模块 -->
-        <div class="f2shouji">
+        <div class="floor f2">
             <div class="box_hd">
                 <h2 class="fl">手机</h2>
                 <div class="fr tab_list">
@@ -324,8 +326,132 @@
                 </div>
             </div>
         </div>
+        <!-- 服装模块 -->
+        <div class="floor f3">
+            <div class="box_hd">
+                <h2 class="fl">服装</h2>
+                <div class="fr tab_list">
+                    <ul>
+                        <li><a class="color_red" href="#">热门</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">夏季</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">冬季</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">大衣</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">短袖T恤</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">长裤</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">棉服</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <div class="tab_content">
+                    <ul>
+                        <li>
+                            <div class="navfast">
+                                <ul>
+                                    <li><a href="javascript:;">节能补贴</a></li>
+                                    <li><a href="javascript:;">4k电视</a></li>
+                                    <li><a href="javascript:;">空气净化器</a></li>
+                                    <li><a href="javascript:;">长虹电饭煲</a></li>
+                                    <li><a href="javascript:;">滚筒洗衣机</a></li>
+                                    <li><a href="javascript:;">美的热水器</a></li>
+                                </ul>
+                            </div>
+                            <a href="javascript:;"><img src="upload/floor-1-1.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="upload/floor-1-2.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="upload/floor-1-3.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-4.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="upload/floor-1-5.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="upload/floor-1-6.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-7.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 生鲜模块 -->
+        <div class="floor f4">
+            <div class="box_hd">
+                <h2 class="fl">生鲜</h2>
+                <div class="fr tab_list">
+                    <ul>
+                        <li><a class="color_red" href="#">热门</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">肉类</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">海鲜</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">鱼类</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">进口</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">果蔬</a></li>
+                        <li></li>
+                        <li><a href="javascript:;">杂粮</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <div class="tab_content">
+                    <ul>
+                        <li>
+                            <div class="navfast">
+                                <ul>
+                                    <li><a href="javascript:;">节能补贴</a></li>
+                                    <li><a href="javascript:;">4k电视</a></li>
+                                    <li><a href="javascript:;">空气净化器</a></li>
+                                    <li><a href="javascript:;">长虹电饭煲</a></li>
+                                    <li><a href="javascript:;">滚筒洗衣机</a></li>
+                                    <li><a href="javascript:;">美的热水器</a></li>
+                                </ul>
+                            </div>
+                            <a href="javascript:;"><img src="upload/floor-1-1.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="upload/floor-1-2.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="upload/floor-1-3.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-4.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="upload/floor-1-5.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="upload/floor-1-6.png" alt=""></a>
+                            <a href="javascript:;"><img src="upload/floor-1-7.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- floor模块结束 -->
+    <!-- 电梯导航模块开始 -->
+    <ul class="backs">
+        <li>返回顶部</li>
+        <li>家电模块</li>
+        <li>手机模块</li>
+        <li>服装模块</li>
+        <li>生鲜模块</li>
+    </ul>
+    <!-- 电梯导航模块结束 -->
+
+    <!-- 空白距离 便于实现空白导航 -->
+    <div style="height: 500px;"></div>
 
     <!-- footer底部模块开始 -->
     <div class="footer">

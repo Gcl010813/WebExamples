@@ -221,7 +221,6 @@
     float: left;
     width: 248px;
     height: 100%;
-    background-color: aqua;
 }
 
 .recomR li:nth-child(even) {
@@ -238,57 +237,57 @@
     margin-top: 10px;
 }
 
-/* **********flloor1家电模块 */
-.f1jiadian .box_hd {
+/* **********flor模块 通用样式 */
+.floor .box_hd {
     height: 30px;
     line-height: 30px;
     border-bottom: 2px solid #c81623;
 }
 
-.f1jiadian .box_hd h2 {
+.floor .box_hd h2 {
     width: 100px;
     color: #c81623;
     font-weight: 400;
 }
 
-.f1jiadian .box_hd .tab_list ul li {
+.floor .box_hd .tab_list ul li {
     float: left;
 }
 
-.f1jiadian .box_hd .tab_list ul li a {
+.floor .box_hd .tab_list ul li a {
     /* 扩大点击范围 */
     display: block;
     padding: 0 20px;
 }
 
-.f1jiadian .box_hd .tab_list ul li:nth-child(even) {
+.floor .box_hd .tab_list ul li:nth-child(even) {
     width: 1px;
     height: 16px;
     background-color: #7f6697;
     margin: 7px 0;
 }
 
-.f1jiadian .box_bd {
+.floor .box_bd {
     height: 360px;
 }
 
-.f1jiadian .box_bd .tab_content>ul>li {
+.floor .box_bd .tab_content>ul>li {
     float: left;
     width: 220px;
     height: 360px;
     text-align: center;
 }
 
-.f1jiadian .box_bd .tab_content a {
+.floor .box_bd .tab_content a {
     /* 扩大点击范围 */
     display: block;
 }
 
-.f1jiadian .box_bd .tab_content>ul>li:nth-child(2) {
+.floor .box_bd .tab_content>ul>li:nth-child(2) {
     width: 320px;
 }
 
-.f1jiadian .box_bd .tab_content .navfast ul>li {
+.floor .box_bd .tab_content .navfast ul>li {
     float: left;
     width: 85px;
     height: 30px;
@@ -298,88 +297,47 @@
 }
 
 
-.f1jiadian .box_bd .tab_content>ul>li:nth-child(3),
-.f1jiadian .box_bd .tab_content>ul>li:nth-child(4) {
+.floor .box_bd .tab_content>ul>li:nth-child(3),
+.floor .box_bd .tab_content>ul>li:nth-child(4) {
     border-right: 1px solid #cccccc;
 }
 
 
-.f1jiadian .box_bd .tab_content>ul>li:nth-child(3) a:nth-child(1),
-.f1jiadian .box_bd .tab_content>ul>li:nth-child(5) a:nth-child(1) {
+.floor .box_bd .tab_content>ul>li:nth-child(3) a:nth-child(1),
+.floor .box_bd .tab_content>ul>li:nth-child(5) a:nth-child(1) {
     border-bottom: 2px solid #cccccc;
 }
-
-/* 手机模块 */
-.f2shouji .box_hd {
-    height: 30px;
-    line-height: 30px;
-    margin-top: 10px;
-    border-bottom: 2px solid #c81623;
-}
-
-.f2shouji .box_hd h2 {
-    width: 100px;
-    color: #c81623;
-    font-weight: 400;
-}
-
-.f2shouji .box_hd .tab_list ul li {
-    float: left;
-}
-
-.f2shouji .box_hd .tab_list ul li a {
-    /* 扩大点击范围 */
-    display: block;
-    padding: 0 20px;
-}
-
-.f2shouji .box_hd .tab_list ul li:nth-child(even) {
-    width: 1px;
-    height: 16px;
-    background-color: #7f6697;
-    margin: 7px 0;
-}
-
-.f2shouji .box_bd {
-    height: 360px;
-}
-
-.f2shouji .box_bd .tab_content>ul>li {
-    float: left;
-    width: 220px;
-    height: 360px;
-    text-align: center;
-}
-
-.f2shouji .box_bd .tab_content a {
-    /* 扩大点击范围 */
-    display: block;
-}
-
-.f2shouji .box_bd .tab_content>ul>li:nth-child(2) {
-    width: 320px;
-}
-
-.f2shouji .box_bd .tab_content .navfast ul>li {
-    float: left;
-    width: 85px;
-    height: 30px;
-    line-height: 30px;
-    margin: 5px 10px;
-    border-bottom: 1px solid #cccccc;
-}
-
-
-.f2shouji .box_bd .tab_content>ul>li:nth-child(3),
-.f2shouji .box_bd .tab_content>ul>li:nth-child(4) {
-    border-right: 1px solid #cccccc;
-}
-
-
-.f2shouji .box_bd .tab_content>ul>li:nth-child(3) a:nth-child(1),
-.f2shouji .box_bd .tab_content>ul>li:nth-child(5) a:nth-child(1) {
-    border-bottom: 2px solid #cccccc;
-}
-
 
 /* **************************floor模块结束 */
+
+
+/* **************************电梯导航模块开始 */
+.backs {
+    position: fixed;
+    top: 300px;
+    /* right: 290px; */
+    left: 0;
+    border: 1px solid gray;
+    cursor: pointer;
+    display: none;
+}
+
+.backs li {
+    width: 50px;
+    height: 50px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 17px;
+    word-wrap: 2;
+    border-bottom: 1px solid grey;
+}
+
+.backs li:last-child {
+    border: 0;
+}
+
+.selectedLi {
+    background-color: aqua;
+}
+
+/* **************************电梯导航模块结束 */
